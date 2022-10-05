@@ -10509,19 +10509,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1240376768}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1550014862}
-        m_TargetAssemblyTypeName: Managers.GameManager, Assembly-CSharp
-        m_MethodName: CashIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1240376768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11285,11 +11273,9 @@ MonoBehaviour:
     Type: 0
   AmountEarnedPerPump: 1
   BalloonScaleIncrement: 0.03
-  Screens:
-  - {fileID: 2053022079}
-  - {fileID: 1550014860}
-  - {fileID: 837812294}
   InGameHUD:
+    CashInButton: {fileID: 1240376767}
+    InflateButton: {fileID: 1693109226}
     BalloonSprite: {fileID: 1047017031}
     BalloonNumberText: {fileID: 1928393393}
     CurrentEarnedText: {fileID: 766616972}
@@ -16433,19 +16419,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1693109227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1550014862}
-        m_TargetAssemblyTypeName: Managers.GameManager, Assembly-CSharp
-        m_MethodName: InflateBalloon
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1693109227
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -157,16 +157,13 @@ public class FragebogenManager : MonoBehaviour
                         print("False at free input: " + answer.gameObject.name); 
                         return false;
                     }
-                    /*
-                    if(answer.gameObject.name == "prolificID")
+                    if(answer.gameObject.name == "StartScreen")
                     {
-                        
-                            if(answer.currentAnswer.Length != 4)
-                            {
-                                return false; 
-                            }
+                        if(answer.CurrentAnswer.Length != 4) {
+                            return false; 
+                        }
                     }
-                    */
+                    
                 }
 
                 if(answer.questionType == AnswerSaver.QuestionType.other)

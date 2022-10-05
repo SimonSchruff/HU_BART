@@ -33,15 +33,22 @@ namespace Managers
 
             _source = GetComponent<AudioSource>(); 
         }
-
-        public void PlayRobotClip(int index)
+        
+        /// <summary>
+        /// Play a clip from the robot sound array;
+        /// </summary>
+        /// <param name="index">Index of clip in RobotSounds[]</param>
+        /// <returns>Length of played clip in seconds; If source or clip is null, method returns 0;</returns>
+        public float PlayRobotClip(int index)
         {
             if (!_source || !RobotSounds[index])
-                return;
+                return 0.0f;
             
             _source.Stop();
             _source.clip = RobotSounds[index];
             _source.Play();
+
+            return _source.clip.length;
         }
 
         public void PlayClip(sound soundToPlay)
