@@ -86,6 +86,14 @@ namespace Managers
         {
             _balloonData.Add(data);
         }
+        
+        /// <summary>
+        /// Save id of test person, for later saving
+        /// </summary>
+        public void SaveID(string id)
+        {
+            PlayerID = id;
+        }
 
         // Create Title Line for CSV File
         private string CreateCSVTitle()

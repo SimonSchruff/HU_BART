@@ -135,22 +135,15 @@ public class FragebogenManager : MonoBehaviour
                             print("False at toogle: " + answer.gameObject.name); 
                             return false;
                         }
-                        else if(answer.gameObject.name == "atc_license" || answer.gameObject.name == "declarationConsent")
-                        {
-                            if (answer.currentAnswer == "2")
-                            {
-                                ShowIneligableScreen();
-                                return false;
-                            }
-                        }
+                        
                         else if(answer.gameObject.name == "intro1_1" || answer.gameObject.name == "intro1_3" || answer.gameObject.name == "intro2_3")
                         {
-                            if (answer.currentAnswer == "2") // Answered 2:False
+                            if (answer.CurrentAnswer == "2") // Answered 2:False
                                 return false; 
                         }
                         else if (answer.gameObject.name == "intro1_2" || answer.gameObject.name == "intro2_1" || answer.gameObject.name == "intro2_2")
                         {
-                            if (answer.currentAnswer == "1") // Answered 1:True
+                            if (answer.CurrentAnswer == "1") // Answered 1:True
                                 return false;
                         }
 
@@ -159,12 +152,11 @@ public class FragebogenManager : MonoBehaviour
 
                 if (answer.questionType == AnswerSaver.QuestionType.freeInputAlphaNum || answer.questionType == AnswerSaver.QuestionType.freeInputNumber || answer.questionType == AnswerSaver.QuestionType.togglesWithFreeInput)
                 {
-                    if (answer.currentAnswer == null || answer.currentAnswer == "") // If no input happened in free input field dont allow continue
+                    if (String.IsNullOrEmpty(answer.CurrentAnswer))
                     {
                         print("False at free input: " + answer.gameObject.name); 
                         return false;
                     }
-
                     /*
                     if(answer.gameObject.name == "prolificID")
                     {
@@ -179,7 +171,7 @@ public class FragebogenManager : MonoBehaviour
 
                 if(answer.questionType == AnswerSaver.QuestionType.other)
                 {
-                    if(answer.currentAnswer == null || answer.currentAnswer == "")
+                    if(answer.CurrentAnswer == null || answer.CurrentAnswer == "")
                     {
                         print("False at free input: " + answer.gameObject.name);
                         return false; 

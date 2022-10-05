@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -8,16 +9,17 @@ using TMPro;
 public class AnswerSaver : MonoBehaviour
 {
 
-    public string currentAnswer;
+    [Tooltip("Set Type of Question to save Answer correctly;")] public QuestionType questionType;
+    [Tooltip("Current Value of answer that will be saved;")] public string CurrentAnswer;
     
     [Header("Toggles with InputField")]
-    [Tooltip("If Question Type is Toggles with Input Field, it needs to be set here;")] public TMP_InputField toggleIF; 
+    [Tooltip("If Question Type is Toggles with Input Field, it needs to be set here;")] public TMP_InputField ToggleIF; 
 
-    private Toggle[] toggles; 
-    private TMP_InputField tmp_inputField;
-    private Slider slider; 
+    // Private Vars
+    private Toggle[] _toggles; 
+    private TMP_InputField _tmp_inputField;
+    private Slider _slider;
 
-    
     public enum QuestionType {
         toggles, 
         togglesWithFreeInput, 
@@ -26,30 +28,28 @@ public class AnswerSaver : MonoBehaviour
         slider,
         other
     }
-    [Tooltip("Set Type of Question to save Answer")] public QuestionType questionType ;
 
     void Awake()
     {
-        switch(questionType)
-        {
+        switch(questionType) {
             case QuestionType.toggles:
-                toggles = GetComponentsInChildren<Toggle>();
+                _toggles = GetComponentsInChildren<Toggle>();
                 break;
             case QuestionType.togglesWithFreeInput:
-                toggles = GetComponentsInChildren<Toggle>();
-                tmp_inputField = GetComponentInChildren<TMP_InputField>(); 
+                _toggles = GetComponentsInChildren<Toggle>();
+                _tmp_inputField = GetComponentInChildren<TMP_InputField>(); 
                 break;
             case QuestionType.freeInputNumber:
-                tmp_inputField = GetComponentInChildren<TMP_InputField>(); 
+                _tmp_inputField = GetComponentInChildren<TMP_InputField>(); 
                 break;
             case QuestionType.slider:
-                slider = GetComponentInChildren<Slider>();
+                _slider = GetComponentInChildren<Slider>();
                 break;
             case QuestionType.freeInputAlphaNum:
-                tmp_inputField = GetComponentInChildren<TMP_InputField>();
+                _tmp_inputField = GetComponentInChildren<TMP_InputField>();
                 break;
             case QuestionType.other:
-                currentAnswer = "null"; 
+                CurrentAnswer = "null"; 
                 break;
         }
     }
@@ -60,33 +60,33 @@ public class AnswerSaver : MonoBehaviour
         {
             case QuestionType.toggles: 
 
-                foreach(Toggle toggle in toggles)
+                foreach(Toggle toggle in _toggles)
                 {
                     if(toggle.isOn == true)
                     {
-                        currentAnswer = toggle.GetComponentInChildren<Text>().text;
-                        if(name == "education" && currentAnswer == "8" || name == "countryOfResidence" && currentAnswer == "9" || name == "employment" && currentAnswer == "10" )
+                        CurrentAnswer = toggle.GetComponentInChildren<Text>().text;
+                        if(name == "education" && CurrentAnswer == "8" || name == "countryOfResidence" && CurrentAnswer == "9" || name == "employment" && CurrentAnswer == "10" )
                         {
-                            toggleIF.GetComponentInParent<AnswerSaver>().currentAnswer = toggleIF.text; 
+                            ToggleIF.GetComponentInParent<AnswerSaver>().CurrentAnswer = ToggleIF.text; 
                         }
                     }
                 }
                 break; 
             case QuestionType.togglesWithFreeInput: 
 
-                foreach(Toggle toggle in toggles)
+                foreach(Toggle toggle in _toggles)
                 {
                     if(toggle.isOn == true)
                     {
                         if(toggle.GetComponentInChildren<InputField>() != null)
                         {
-                            tmp_inputField.interactable = true; 
-                            currentAnswer = tmp_inputField.text; 
+                            _tmp_inputField.interactable = true; 
+                            CurrentAnswer = _tmp_inputField.text; 
                         }
                         else
                         {
-                            tmp_inputField.interactable = false;
-                            currentAnswer = toggle.GetComponentInChildren<Text>().text; 
+                            _tmp_inputField.interactable = false;
+                            CurrentAnswer = toggle.GetComponentInChildren<Text>().text; 
                         }
                         
                     }
@@ -94,18 +94,18 @@ public class AnswerSaver : MonoBehaviour
 
                 break;
             case QuestionType.freeInputNumber: 
-                currentAnswer = tmp_inputField.text; 
+                CurrentAnswer = _tmp_inputField.text; 
                 break;
             case QuestionType.slider:
-                currentAnswer = slider.value.ToString(); 
+                CurrentAnswer = _slider.value.ToString(); 
                 break;
             case QuestionType.freeInputAlphaNum:
-                if (tmp_inputField != null) {
-                    currentAnswer = tmp_inputField.text;
+                if (_tmp_inputField != null) {
+                    CurrentAnswer = _tmp_inputField.text;
                     return;
                 }
 
-                currentAnswer = tmp_inputField.text;
+                CurrentAnswer = _tmp_inputField.text;
                 break;
             case QuestionType.other:
                 break;
@@ -116,9 +116,9 @@ public class AnswerSaver : MonoBehaviour
     public void SaveAnswer(string name)
     {
         //Save to SQL Database with SQL Save Manager        
-        if(name == "prolificID")
-        {
-          //  SQLSaveManager.instance.SaveProlificID(currentAnswer); 
+        if(name == "StartScreen")
+        { 
+            SaveManager.instance.SaveID(CurrentAnswer);
         }
         else if(name == "intro1_1" || name == "intro1_2" || name == "intro1_3" || name == "intro2_1" || name == "intro2_2" || name == "intro2_3" || name == "declarationConsent") // Do not need to be saved; 
         {
