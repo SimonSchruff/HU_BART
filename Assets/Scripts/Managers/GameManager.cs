@@ -235,7 +235,7 @@ namespace Managers
                     if (_firstCashIn) {
                         // Play Robot Sound and disable buttons for clip length
                         InGameHUD.OneMoreText.SetActive(true);
-                        var clipLength = SoundManager.instance.PlayRobotClip(UnityEngine.Random.Range(0, 2));
+                        var clipLength = SoundManager.instance.PlayRandomRobotClip(UnityEngine.Random.Range(0, 2));
                         StartCoroutine(DisableButtonForSeconds(clipLength));
                         
                         // Ensure Balloon has enough pumps left

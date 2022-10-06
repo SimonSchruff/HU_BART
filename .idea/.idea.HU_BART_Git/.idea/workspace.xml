@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4c5c2d98-cd36-4387-acde-70ab82eaf590" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HU_BART_Git/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HU_BART_Git/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fragebogen/FragebogenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fragebogen/FragebogenManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1664970869554</updated>
       <workItem from="1664972549226" duration="2168000" />
-      <workItem from="1664978532593" duration="1478000" />
+      <workItem from="1664978532593" duration="2162000" />
+      <workItem from="1665058239831" duration="656000" />
     </task>
     <servers />
   </component>

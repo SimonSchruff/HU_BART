@@ -22,6 +22,7 @@ namespace Managers
         public SaveLocation SelectedSaveLocation = SaveLocation.Editor; 
 
         public string PlayerID = "test_id";
+        public int GroupID = 1;
         public string URL = "https://marki.fun/PHP/dataFL.php";
         
         private string _fileLoc = ""; 
@@ -98,7 +99,8 @@ namespace Managers
         // Create Title Line for CSV File
         private string CreateCSVTitle()
         {
-            string returnTitle = "ID";
+            string returnTitle = "ID, Group";
+
             string[] balloonDataTitles = new string[_balloonAmount];
             
             for (int i = 0; i < _balloonAmount; i++) {
@@ -112,7 +114,7 @@ namespace Managers
         // Create Data Entry Line for CSV File
         private string CreateCSVLine()
         {
-            string content = PlayerID + "_" + _startTime.Month +"_"+ _startTime.Day +"_"+ + _startTime.Hour +"_"+ _startTime.Minute;
+            string content = PlayerID + "_" + _startTime.Month +"_"+ _startTime.Day +"_"+ + _startTime.Hour +"_"+ _startTime.Minute + "," + GroupID;
             string[] contentData = new string[_balloonAmount];
 
             for (int i = 0; i < _balloonData.Count; i++) {

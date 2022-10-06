@@ -23,6 +23,7 @@ namespace Managers
         
         
         private AudioSource _source;
+        private int _groupID;
     
         void Awake()
         {
@@ -32,6 +33,8 @@ namespace Managers
                 Destroy(this);
 
             _source = GetComponent<AudioSource>(); 
+            _groupID = SaveManager.instance.GroupID;
+
         }
         
         /// <summary>
@@ -39,11 +42,11 @@ namespace Managers
         /// </summary>
         /// <param name="index">Index of clip in RobotSounds[]</param>
         /// <returns>Length of played clip in seconds; If source or clip is null, method returns 0;</returns>
-        public float PlayRobotClip(int index)
+        public float PlayRandomRobotClip(int index)
         {
             if (!_source || !RobotSounds[index])
                 return 0.0f;
-            
+
             _source.Stop();
             _source.clip = RobotSounds[index];
             _source.Play();
@@ -51,23 +54,24 @@ namespace Managers
             return _source.clip.length;
         }
 
-        public void PlayClip(sound soundToPlay)
+        public void PlaySoundByGroup(int groupID)
         {
-            if (!_source || !InflateSound || !PopSound)
+            if (!_source)
                 return;
         
             _source.Stop();
 
-            switch (soundToPlay)
+            switch (_groupID)
             {
-                case sound.inflate:
-                    _source.clip = InflateSound;
+                case 1:
                     break;
-                case sound.pop:
-                    _source.clip = PopSound;
+                case 2:
                     break;
+                case 3:
+                    break;
+                
             }
-        
+            
             _source.Play();
         }
     }
