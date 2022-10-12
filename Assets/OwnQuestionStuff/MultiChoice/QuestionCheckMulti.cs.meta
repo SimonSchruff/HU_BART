@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 91bfbaa2662e23547963f33b7787230c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - oneCheckboxPrefab: {fileID: 6394683659667454223, guid: 9472cd397e85140409804929b967d91f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
