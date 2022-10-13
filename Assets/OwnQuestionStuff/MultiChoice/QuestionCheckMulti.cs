@@ -13,6 +13,18 @@ public class QuestionCheckMulti : MonoBehaviour
     {
         public string questionText;
         public string saveName;
+        public string value;
+        public bool isSlider;
+        public sliderDef sliderProps;
+        public bool isTextInput;
+    }
+    [System.Serializable]
+    public struct sliderDef {
+        public int startValue;
+        public int minValue;
+        public int maxValue;
+     //   public bool onlyWholeNums;
+
     }
 
     public oneQuestion[] oneQuestionDef;
@@ -28,9 +40,21 @@ public class QuestionCheckMulti : MonoBehaviour
     [Tooltip("value in between 0-1")] 
     public float questionSpace = .3f;
 
+    public bool allQuestionsAnswered = false;
 
 
     public bool textOnEveryEntry = false;
+
+    public bool checkIfAllQuestionsAnswered (){
+        OneQuestionReferenceHelp [] checkedArray = GetComponentsInChildren<OneQuestionReferenceHelp>();
+        foreach (var check in checkedArray){
+            if(!check.isQuestionSelected){
+                return false;
+            }
+        }
+        allQuestionsAnswered = true;
+        return true;
+    }
 
     public void redrawQuestions() {
         int childCount = transform.childCount;
@@ -44,7 +68,8 @@ public class QuestionCheckMulti : MonoBehaviour
         OneQuestionReferenceHelp refLegend = tempLegend.GetComponent<OneQuestionReferenceHelp>();
         foreach (var legend in legendOfVoteables)
         {
-            Instantiate(oneLegendEntryPrefab, refLegend.checkboxesPanel.transform);
+            GameObject leg = Instantiate(oneLegendEntryPrefab, refLegend.checkboxesPanel.transform);
+            leg.GetComponentInChildren<TMP_Text>().text = legend;
         }
 
         foreach (var ques in oneQuestionDef)
@@ -53,10 +78,17 @@ public class QuestionCheckMulti : MonoBehaviour
             OneQuestionReferenceHelp refs = tempObj.GetComponent<OneQuestionReferenceHelp>();
             refs.questionTextRef.text = ques.questionText;  // Assign Text
 
-            foreach (var legend in legendOfVoteables)
-            {
-                Instantiate(oneCheckboxPrefab, refs.checkboxesPanel.transform);
+            if(ques.isSlider){  // When is slider
+
+            } else if(ques.isTextInput){ // When is text input field
+
+            } else {    // MultiQuestion answer create check
+
+                foreach (var legend in legendOfVoteables)
+                {
+                    Instantiate(oneCheckboxPrefab, refs.checkboxesPanel.transform);
+                }
             }
-        }
+        }   
     }
 }

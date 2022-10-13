@@ -62,24 +62,25 @@ public class FragebogenManager : MonoBehaviour
 
         if (isAllowedToChange)
         {
-            SaveAnswer(currentID);
+        //    LevelManager.lm.nextLevel();
+            // SaveAnswer(currentID);
 
-            questions[currentID].questionObj.gameObject.SetActive(false);
-            //questions[currentID +1 ].questionObj.gameObject.SetActive(true);
-            print(questions[currentID].questionObj.gameObject.name); 
+            // questions[currentID].questionObj.gameObject.SetActive(false);
+            // //questions[currentID +1 ].questionObj.gameObject.SetActive(true);
+            // print(questions[currentID].questionObj.gameObject.name); 
 
             
-            if(questions[currentID].questionObj.gameObject.name ==  "Set Active Self Eff")
-            {
-                //MySceneManager.Instance.LoadSceneByName("NBackSpiel"); 
-            }
-            else if (currentID != (questions.Length - 1)) // Last question -> Dont activate next UI
-            {
-                GameObject obj = questions[currentID + 1].questionObj.gameObject;
-                obj.SetActive(true);
-            }
+            // if(questions[currentID].questionObj.gameObject.name ==  "Set Active Self Eff")
+            // {
+            //     //MySceneManager.Instance.LoadSceneByName("NBackSpiel"); 
+            // }
+            // else if (currentID != (questions.Length - 1)) // Last question -> Dont activate next UI
+            // {
+            //     GameObject obj = questions[currentID + 1].questionObj.gameObject;
+            //     obj.SetActive(true);
+            // }
 
-            _questionNumber++;
+            // _questionNumber++;
         }
         else
         {

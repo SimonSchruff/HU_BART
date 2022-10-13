@@ -14,7 +14,7 @@ public class OneToggleEntry : MonoBehaviour
             desel.deselect();
         }
 
-        GetComponentInParent<OneQuestionReferenceHelp>().isQuestionSelected = true; // Unable to unselect values
+        GetComponentInParent<OneQuestionReferenceHelp>().setIsQuestionSelected(); // Unable to unselect values
 
         toggleElemRef.isOn = true;
     }

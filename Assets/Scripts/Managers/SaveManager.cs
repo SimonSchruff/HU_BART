@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.IO;
 using System.Linq;
-
+using TMPro;
 
 namespace Managers
 {
@@ -53,6 +53,13 @@ namespace Managers
                 Destroy(this);
             
             DontDestroyOnLoad(gameObject);
+        }
+
+        public void checkIfVPContinue (){
+            string input = FindObjectOfType<TMP_InputField>().text; //Check if VP input is okay and go to next level
+            if(input.Length > 0){
+                LevelManager.lm.nextLevel();
+            }
         }
 
         private void Start() 

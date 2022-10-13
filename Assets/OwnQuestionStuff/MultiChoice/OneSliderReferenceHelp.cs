@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class OneQuestionReferenceHelp : MonoBehaviour
+public class OneSliderReferenceHelp : MonoBehaviour
 {
     public bool isQuestionSelected = false;
 
     public GameObject questionTextPanel;
-    public GameObject checkboxesPanel;
+    public GameObject sliderPanel;
+    public Slider sliderRef;
     public TMP_Text questionTextRef;
 
     public void setIsQuestionSelected (){

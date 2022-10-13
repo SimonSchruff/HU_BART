@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9582a54ea954e9e8ffb3a0f702f9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isQuestionSelected: 0
+  isQuestionSelected: 1
   questionTextPanel: {fileID: 2658846371840490428}
   checkboxesPanel: {fileID: 2658846373236101478}
   questionTextRef: {fileID: 0}
