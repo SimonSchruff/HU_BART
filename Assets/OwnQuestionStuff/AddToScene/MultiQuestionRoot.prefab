@@ -7774,12 +7774,40 @@ MonoBehaviour:
   oneQuestionDef:
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Schmerz zu empfinden."
     saveName: expAgency_1
+    value: 
+    isSlider: 0
+    sliderProps:
+      startValue: 0
+      minValue: 0
+      maxValue: 0
+    isTextInput: 0
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Freude zu empfinden."
     saveName: expAgency_2
+    value: 
+    isSlider: 0
+    sliderProps:
+      startValue: 0
+      minValue: 0
+      maxValue: 0
+    isTextInput: 0
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Freude zu empfinden."
     saveName: expAgency_3
+    value: 
+    isSlider: 0
+    sliderProps:
+      startValue: 0
+      minValue: 0
+      maxValue: 0
+    isTextInput: 0
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Freude zu empfinden."
     saveName: expAgency_4
+    value: 
+    isSlider: 0
+    sliderProps:
+      startValue: 0
+      minValue: 0
+      maxValue: 0
+    isTextInput: 0
   allQuestions: []
   legendOfVoteables:
   - "stimmt \xFCberhaupt nicht"
@@ -7791,6 +7819,7 @@ MonoBehaviour:
   oneQuestionPrefab: {fileID: 2658846372570213069, guid: 53ce540f026e34afe975481ba0457992, type: 3}
   oneLegendPrefab: {fileID: 2658846372570213069, guid: f948b5ec30ee442c7a325ef93db25dda, type: 3}
   oneLegendEntryPrefab: {fileID: 6394683659667454223, guid: cfdd2fc5316b2496babfe519377e4b36, type: 3}
+  oneSliderPrefab: {fileID: 3169431010239643116, guid: 8cb0c1bd0e9314c4ba753dbe988abb64, type: 3}
   questionSpace: 0.46
   allQuestionsAnswered: 0
   textOnEveryEntry: 0

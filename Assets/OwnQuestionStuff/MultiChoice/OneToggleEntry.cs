@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class OneToggleEntry : MonoBehaviour
 {
+    public int index;
     public Toggle toggleElemRef;  
 
     public void buttonClick (){
         foreach (var desel in transform.parent.GetComponentsInChildren<OneToggleEntry>())
         {
-            Debug.Log("COT");
+       //     Debug.Log("KOT");
             desel.deselect();
         }
+        Debug.Log(index + " index");
 
-        GetComponentInParent<OneQuestionReferenceHelp>().setIsQuestionSelected(); // Unable to unselect values
+        GetComponentInParent<OneQuestionElem>().assignValue(index.ToString()); // Unable to unselect values
 
         toggleElemRef.isOn = true;
     }

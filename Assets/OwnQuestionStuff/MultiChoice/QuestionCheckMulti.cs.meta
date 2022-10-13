@@ -5,6 +5,10 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - oneCheckboxPrefab: {fileID: 6394683659667454223, guid: 9472cd397e85140409804929b967d91f, type: 3}
+  - oneQuestionPrefab: {fileID: 2658846372570213069, guid: 53ce540f026e34afe975481ba0457992, type: 3}
+  - oneLegendPrefab: {fileID: 2658846372570213069, guid: f948b5ec30ee442c7a325ef93db25dda, type: 3}
+  - oneLegendEntryPrefab: {fileID: 6394683659667454223, guid: cfdd2fc5316b2496babfe519377e4b36, type: 3}
+  - oneSliderPrefab: {fileID: 3169431010239643116, guid: 8cb0c1bd0e9314c4ba753dbe988abb64, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

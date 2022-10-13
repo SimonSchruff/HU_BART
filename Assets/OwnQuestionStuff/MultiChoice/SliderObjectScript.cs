@@ -20,5 +20,7 @@ public class SliderObjectScript : MonoBehaviour
 
     public void valueChange (){
         sliderTextRef.text = sliderRef.value.ToString();
+
+        GetComponentInParent<OneQuestionElem>().assignValue(sliderTextRef.text);
     }
 }

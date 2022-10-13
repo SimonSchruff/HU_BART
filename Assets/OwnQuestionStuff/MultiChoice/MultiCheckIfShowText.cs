@@ -13,7 +13,7 @@ public class MultiCheckIfShowText : MonoBehaviour
         {
             questionRef = GetComponentInParent<QuestionCheckMulti>();
            // questionRef = transform.parent.transform.parent.transform.parent.GetComponent<QuestionCheckMulti>();
-            Debug.Log("Ref set");
+            //Debug.Log("Ref set");
         }
         transform.GetChild(0).gameObject.SetActive(questionRef.textOnEveryEntry);
     }
