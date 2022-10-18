@@ -13,6 +13,8 @@ public class QuestionCheckMulti : MonoBehaviour
     {
         public string questionText;
         public string saveName;
+        public bool isDoppleLegend;
+        public SecondLegendText seclegendText;
         public bool isSlider;
         public sliderDef sliderProps;
         public bool isTextInput;
@@ -26,7 +28,14 @@ public class QuestionCheckMulti : MonoBehaviour
 
     }
 
-    public Dictionary<string,string> saveDictionary = new Dictionary<string,string>();
+    [System.Serializable]
+    public struct SecondLegendText
+    {
+        public string secondLegendText; 
+    }
+
+
+        public Dictionary<string,string> saveDictionary = new Dictionary<string,string>();
 
     [SerializeField] bool hasLegend = true;
     public oneQuestion[] oneQuestionDef;
@@ -37,6 +46,7 @@ public class QuestionCheckMulti : MonoBehaviour
     [SerializeField] GameObject oneLegendPrefab;
     [SerializeField] GameObject oneLegendEntryPrefab;
     [SerializeField] GameObject oneSliderPrefab;
+    [SerializeField] GameObject oneDoppleLegendPrefab;
 
     [Tooltip("value in between 0-1")] 
     public float questionSpace = .3f;
@@ -54,6 +64,7 @@ public class QuestionCheckMulti : MonoBehaviour
             }
         }
         allQuestionsAnswered = true;
+        GetComponentInParent<ScrollRootScript>().checkIfALLQuestionsAnswered();
         return true;
     }
 
@@ -110,7 +121,7 @@ public class QuestionCheckMulti : MonoBehaviour
             } else if(ques.isTextInput){ // When is text input field
 
             } else {    // MultiQuestion answer create check
-                GameObject tempObj = Instantiate(oneQuestionPrefab, transform);
+                GameObject tempObj = Instantiate(ques.isDoppleLegend ? oneDoppleLegendPrefab : oneQuestionPrefab, transform);
                 assignSaveName(tempObj,ques);
                 OneQuestionReferenceHelp refs = tempObj.GetComponent<OneQuestionReferenceHelp>();
                 refs.questionTextRef.text = ques.questionText;  // Assign Text
@@ -121,6 +132,10 @@ public class QuestionCheckMulti : MonoBehaviour
                     GameObject check = Instantiate(oneCheckboxPrefab, refs.checkboxesPanel.transform);
                     check.GetComponent<OneToggleEntry>().index = counter;
                     counter ++;
+                }
+                if (ques.isDoppleLegend) // Name the second legend text
+                {
+                    tempObj.GetComponentInChildren<SecondLegendTextIdentifier>().gameObject.GetComponent<TMP_Text>().text = ques.seclegendText.secondLegendText;
                 }
             }
         }  

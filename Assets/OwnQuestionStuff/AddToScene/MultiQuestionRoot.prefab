@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179825644027}
 --- !u!1 &6753196178679639421
 GameObject:
@@ -527,6 +528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196180586006135}
 --- !u!1 &6753196178688580122
 GameObject:
@@ -1082,8 +1084,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393454e0bdab246f98d5b2fadd49861e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDoppleLegend: 0
   questionText: {fileID: 6753196178764301212}
   checkboxesPanel: {fileID: 6753196180538136856}
+  secondLegend: {fileID: 0}
   rootScriptRef: {fileID: 6753196179941161138}
 --- !u!114 &6753196178775334109
 MonoBehaviour:
@@ -1440,6 +1444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196180167325157}
 --- !u!1 &6753196178844212102
 GameObject:
@@ -1780,6 +1785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179377213325}
 --- !u!1 &6753196178870156445
 GameObject:
@@ -1992,8 +1998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393454e0bdab246f98d5b2fadd49861e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDoppleLegend: 0
   questionText: {fileID: 6753196179418680763}
   checkboxesPanel: {fileID: 6753196180319913719}
+  secondLegend: {fileID: 0}
   rootScriptRef: {fileID: 6753196179941161138}
 --- !u!114 &6753196178874414338
 MonoBehaviour:
@@ -2643,6 +2651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179971987444}
 --- !u!1 &6753196179017474362
 GameObject:
@@ -3068,6 +3077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196178738810180}
 --- !u!1 &6753196179062239678
 GameObject:
@@ -3387,8 +3397,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393454e0bdab246f98d5b2fadd49861e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDoppleLegend: 0
   questionText: {fileID: 6753196179546759991}
   checkboxesPanel: {fileID: 6753196179760235399}
+  secondLegend: {fileID: 0}
   rootScriptRef: {fileID: 6753196179941161138}
 --- !u!114 &6753196179080375970
 MonoBehaviour:
@@ -3679,6 +3691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179466315223}
 --- !u!1 &6753196179189361512
 GameObject:
@@ -3868,6 +3881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196178963709336}
 --- !u!1 &6753196179202505816
 GameObject:
@@ -4057,6 +4071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196180302143384}
 --- !u!1 &6753196179211750810
 GameObject:
@@ -6290,6 +6305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179502671768}
 --- !u!1 &6753196179652010674
 GameObject:
@@ -7771,10 +7787,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bfbaa2662e23547963f33b7787230c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasLegend: 1
   oneQuestionDef:
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Schmerz zu empfinden."
     saveName: expAgency_1
-    value: 
+    isDoppleLegend: 0
+    seclegendText:
+      secondLegendText: 
     isSlider: 0
     sliderProps:
       startValue: 0
@@ -7783,7 +7802,9 @@ MonoBehaviour:
     isTextInput: 0
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Freude zu empfinden."
     saveName: expAgency_2
-    value: 
+    isDoppleLegend: 0
+    seclegendText:
+      secondLegendText: 
     isSlider: 0
     sliderProps:
       startValue: 0
@@ -7792,7 +7813,9 @@ MonoBehaviour:
     isTextInput: 0
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Freude zu empfinden."
     saveName: expAgency_3
-    value: 
+    isDoppleLegend: 0
+    seclegendText:
+      secondLegendText: 
     isSlider: 0
     sliderProps:
       startValue: 0
@@ -7801,14 +7824,15 @@ MonoBehaviour:
     isTextInput: 0
   - questionText: "Dieser Roboter hat die F\xE4higkeit, Freude zu empfinden."
     saveName: expAgency_4
-    value: 
+    isDoppleLegend: 0
+    seclegendText:
+      secondLegendText: 
     isSlider: 0
     sliderProps:
       startValue: 0
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  allQuestions: []
   legendOfVoteables:
   - "stimmt \xFCberhaupt nicht"
   - stimmt eher nicht
@@ -7820,6 +7844,7 @@ MonoBehaviour:
   oneLegendPrefab: {fileID: 2658846372570213069, guid: f948b5ec30ee442c7a325ef93db25dda, type: 3}
   oneLegendEntryPrefab: {fileID: 6394683659667454223, guid: cfdd2fc5316b2496babfe519377e4b36, type: 3}
   oneSliderPrefab: {fileID: 3169431010239643116, guid: 8cb0c1bd0e9314c4ba753dbe988abb64, type: 3}
+  oneDoppleLegendPrefab: {fileID: 6498844377307647255, guid: d86842ddd427b4928ab9846fa3d8efaa, type: 3}
   questionSpace: 0.46
   allQuestionsAnswered: 0
   textOnEveryEntry: 0
@@ -8211,6 +8236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179021936464}
 --- !u!1 &6753196179971987446
 GameObject:
@@ -8388,8 +8414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393454e0bdab246f98d5b2fadd49861e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDoppleLegend: 0
   questionText: {fileID: 6753196180607587584}
   checkboxesPanel: {fileID: 6753196180015877830}
+  secondLegend: {fileID: 0}
   rootScriptRef: {fileID: 6753196179941161138}
 --- !u!114 &6753196179985752019
 MonoBehaviour:
@@ -8715,6 +8743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179698190152}
 --- !u!1 &6753196180038184301
 GameObject:
@@ -9290,6 +9319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179959778281}
 --- !u!1 &6753196180145205779
 GameObject:
@@ -9800,6 +9830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179211750808}
 --- !u!1 &6753196180238014351
 GameObject:
@@ -10723,6 +10754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179089377381}
 --- !u!1 &6753196180416628149
 GameObject:
@@ -10997,6 +11029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179412267671}
 --- !u!1 &6753196180481892574
 GameObject:
@@ -11644,8 +11677,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393454e0bdab246f98d5b2fadd49861e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDoppleLegend: 0
   questionText: {fileID: 6753196180179313798}
   checkboxesPanel: {fileID: 6753196178870156444}
+  secondLegend: {fileID: 0}
   rootScriptRef: {fileID: 6753196179941161138}
 --- !u!114 &6753196180563724626
 MonoBehaviour:
@@ -12279,6 +12314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196179363874682}
 --- !u!1 &6753196180712009312
 GameObject:
@@ -12771,6 +12807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196180145205777}
 --- !u!1 &6753196180761392605
 GameObject:
@@ -12960,6 +12997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196180038184275}
 --- !u!1 &6753196180773771110
 GameObject:
@@ -13149,6 +13187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df559dde9da72d4daf0e5a297a227b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   toggleElemRef: {fileID: 6753196180416628155}
 --- !u!1 &6753196180797212086
 GameObject:

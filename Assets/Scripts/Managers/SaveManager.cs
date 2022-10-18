@@ -14,6 +14,8 @@ namespace Managers
         public static SaveManager instance;
 
         // Specifies where to save csv file; Editor saves in project folder and android on persistent path;
+        public List<Dictionary<string, string>> allSaveData = new List<Dictionary<string, string>>();
+
         [Serializable] public enum SaveLocation
         {
             Editor,
@@ -214,12 +216,22 @@ namespace Managers
 
         IEnumerator retrySendData ()
         {
-            
             //GameObject tempError = Instantiate();
             yield return new WaitForSeconds(1);
             //Destroy(tempError);
             StartCoroutine(PostData());
             
+        }
+
+        public void finishSavingAndCloseProgram()
+        {
+            foreach (var dic in allSaveData)
+            {
+                foreach (var dicEntry in dic)
+                {
+                    Debug.Log(dicEntry.Value + "_" + dicEntry.Key);
+                }
+            }
         }
         
     }

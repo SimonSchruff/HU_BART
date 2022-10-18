@@ -9,6 +9,7 @@ MonoImporter:
   - oneLegendPrefab: {fileID: 2658846372570213069, guid: f948b5ec30ee442c7a325ef93db25dda, type: 3}
   - oneLegendEntryPrefab: {fileID: 6394683659667454223, guid: cfdd2fc5316b2496babfe519377e4b36, type: 3}
   - oneSliderPrefab: {fileID: 3169431010239643116, guid: 8cb0c1bd0e9314c4ba753dbe988abb64, type: 3}
+  - oneDoppleLegendPrefab: {fileID: 6498844377307647255, guid: d86842ddd427b4928ab9846fa3d8efaa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
