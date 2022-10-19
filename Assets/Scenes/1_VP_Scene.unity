@@ -889,6 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedSaveLocation: 0
+  actualGroup: 0
   PlayerID: test_id
   GroupID: 1
   URL: https://marki.fun/PHP/dataFL.php

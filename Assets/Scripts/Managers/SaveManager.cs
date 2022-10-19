@@ -21,7 +21,15 @@ namespace Managers
             Editor,
             Android
         }
-        public SaveLocation SelectedSaveLocation = SaveLocation.Editor; 
+        [Serializable]
+        public enum GroupInfo
+        {
+            Group1,
+            Group2,
+            Group3
+        }
+        public SaveLocation SelectedSaveLocation = SaveLocation.Editor;
+        public GroupInfo actualGroup = GroupInfo.Group1;
 
         public string PlayerID = "test_id";
         public int GroupID = 1;
