@@ -38,6 +38,13 @@ public class QuestionCheckMulti : MonoBehaviour
         public Dictionary<string,string> saveDictionary = new Dictionary<string,string>();
 
     [SerializeField] bool hasLegend = true;
+    public int legendTextSize = 35;
+ //   public float legendFieldHeight = 80;
+    public bool hasLegendStartText = false;
+    public string legendStartText = "LegendStartText";
+    public int checkboxTextSize = 35;
+
+
     public oneQuestion[] oneQuestionDef;
     [Tooltip("Beschriftung der Checkboxes")]
     public string[] legendOfVoteables;

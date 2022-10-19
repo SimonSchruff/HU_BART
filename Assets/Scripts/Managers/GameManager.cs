@@ -99,12 +99,7 @@ namespace Managers
             // Continue to part after game
             if (_currentBalloon >= _balloonAmount) {
                 // Last trial
-                if (FragebogenManager.instance) {
-                    FragebogenManager.instance.NextQuestion();
-                }
-                else {
-                    Debug.LogWarning("No FragebogenManager found!");
-                }
+                LevelManager.lm.nextLevel();
             }
         }
 
