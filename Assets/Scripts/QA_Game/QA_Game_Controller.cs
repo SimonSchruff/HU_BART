@@ -19,6 +19,7 @@ public class QA_Game_Controller : MonoBehaviour
 
     [SerializeField] GameObject cardPrefab;
     [SerializeField] GameObject canvasRef;
+    [SerializeField] GameObject randomWheelPrefab;
 
     public int actualGroup = 1;
 
@@ -42,7 +43,7 @@ public class QA_Game_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(initAnimation());
+        startRound();
 
         if(SaveManager.instance.actualGroup == SaveManager.GroupInfo.Group1)
         {
@@ -58,32 +59,47 @@ public class QA_Game_Controller : MonoBehaviour
             actualGroup = 3;
         }
     }
-    public IEnumerator initAnimation()
+
+    void startRound (){
+        StartCoroutine(showRandomWheel(0.1f));
+        StartCoroutine(initCardAni(2.48f));
+        StartCoroutine(letRototTalk(5f));   // needs to be higher than initCardAni
+        StartCoroutine(showContinueBut(10));
+    }
+    public void nextCard (){
+        startRound();
+    }
+
+    public IEnumerator initCardAni(float delay = 1)
     {
+        yield return new WaitForSeconds(delay);
         actualRound++;
+        Debug.Log(actualRound + " init card");
         actualCard = Instantiate(cardPrefab, canvasRef.transform);
         bool _tempLast = actualRound == roundDefiniton.Length -1;
         actualCard.GetComponent<OneGameCardUI>().defineCard(roundDefiniton[actualRound], _tempLast);
         Debug.Log(actualCard);
+    }
 
-        yield return new WaitForSeconds(2.0f);
-        if (roundDefiniton[actualRound].isRobotTalking) // Start rotot talk 
-        {
-            StartCoroutine(letRototTalk());
+    IEnumerator letRototTalk( float delay = 1.0f)
+    {
+        yield return new WaitForSeconds(delay);
+        Debug.Log("Robot talk");
+        if(roundDefiniton[actualRound].isRobotTalking){
+            Debug.Log(actualRound);
+            GetComponent<AudioSource>().clip = getActualAudioClip();
+            GetComponent<AudioSource>().Play();
         }
-        StartCoroutine(showContinueBut());
+    }
+        IEnumerator showRandomWheel(float delay = 5.0f)
+    {
+        yield return new WaitForSeconds(delay);
+        Instantiate (randomWheelPrefab, canvasRef.transform);
     }
 
-    IEnumerator letRototTalk()
+    IEnumerator showContinueBut(float delay = 5.0f)
     {
-        yield return new WaitForSeconds(robotTalkDelay);
-        GetComponent<AudioSource>().clip = getActualAudioClip();
-        GetComponent<AudioSource>().Play();
-    }
-
-    IEnumerator showContinueBut()
-    {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(delay);
         actualCard.GetComponent<OneGameCardUI>().buttonRef.gameObject.SetActive(true);
 
     }
@@ -101,11 +117,5 @@ public class QA_Game_Controller : MonoBehaviour
             default:
                 return null;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

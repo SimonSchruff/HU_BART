@@ -30,24 +30,29 @@ public class OneGameCardUI : MonoBehaviour
     bool buttonClickOnlyOnce = true;
     public void continueClicked()
     {
+        GetComponent<Animator>().SetTrigger("exit");
         if (buttonClickOnlyOnce)
         {
-            QA_Game_Controller.gc.StartCoroutine(QA_Game_Controller.gc.initAnimation());
             StartCoroutine(removeSelfCard());
+            StartCoroutine(delete());
             buttonClickOnlyOnce = false;
             //Play animation stuff
         }
     }
-    IEnumerator removeSelfCard()
+    IEnumerator removeSelfCard(float delay = .5f)
     {
-        yield return new WaitForSeconds(0); // Change this to animation duration
+        yield return new WaitForSeconds(delay); // Change this to animation duration
         if(_isLast)
         {
             LevelManager.lm.nextLevel();
         }
         else
         {
-            Destroy(gameObject);
+            QA_Game_Controller.gc.nextCard();
         }
+    }
+    IEnumerator delete (float delay = .5f){
+        yield return new WaitForSeconds (delay);
+        Destroy(gameObject);
     }
 }

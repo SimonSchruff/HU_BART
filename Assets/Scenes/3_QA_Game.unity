@@ -156,6 +156,7 @@ MonoBehaviour:
   robotTalkDelay: 2
   cardPrefab: {fileID: 4756750656096736302, guid: 6bad847843a0645e5aa66c7106ff2778, type: 3}
   canvasRef: {fileID: 1763120824}
+  randomWheelPrefab: {fileID: 6327514355178446167, guid: 8b4d9672ca673d94eab5dc3879583518, type: 3}
   actualGroup: 1
   roundDefiniton:
   - isRobotTalking: 0
@@ -168,6 +169,56 @@ MonoBehaviour:
     audioFileGr_1: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
     audioFileGr_2: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
     audioFileGr_3: {fileID: 8300000, guid: b3d580c8d08a94885bcbbe2f906e6fea, type: 3}
+  - isRobotTalking: 0
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: b3d580c8d08a94885bcbbe2f906e6fea, type: 3}
+  - isRobotTalking: 1
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 59e59d221106f4f0090f60da87be152c, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 59e59d221106f4f0090f60da87be152c, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: a233598fa0faf42f6a40b33ce70d02f0, type: 3}
+  - isRobotTalking: 0
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: b3d580c8d08a94885bcbbe2f906e6fea, type: 3}
+  - isRobotTalking: 1
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: fdde965545c364c15bea06f98f6dd8ce, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: fdde965545c364c15bea06f98f6dd8ce, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: 2ee021b07b2c34255b13c4357889a9da, type: 3}
+  - isRobotTalking: 0
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: b3d580c8d08a94885bcbbe2f906e6fea, type: 3}
+  - isRobotTalking: 1
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 3e921213438b04904acdf401f7c8cbd8, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 3e921213438b04904acdf401f7c8cbd8, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: e55af14f933f648708c710cfbdba712a, type: 3}
+  - isRobotTalking: 0
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: b3d580c8d08a94885bcbbe2f906e6fea, type: 3}
+  - isRobotTalking: 1
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 590e6a976b9e940df9ffead9651cd349, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 590e6a976b9e940df9ffead9651cd349, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: f8dae8a7d6aad42afb94f1dfb6b03c92, type: 3}
+  - isRobotTalking: 0
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: b3d580c8d08a94885bcbbe2f906e6fea, type: 3}
+  - isRobotTalking: 1
+    questionText: sommertag
+    audioFileGr_1: {fileID: 8300000, guid: 04a6c8ca3aeac427398b635b9183ef48, type: 3}
+    audioFileGr_2: {fileID: 8300000, guid: 04a6c8ca3aeac427398b635b9183ef48, type: 3}
+    audioFileGr_3: {fileID: 8300000, guid: aceae114ba2ae48928c234a6d23352e7, type: 3}
   actualRound: -1
 --- !u!4 &258191740
 Transform:
@@ -440,6 +491,7 @@ GameObject:
   - component: {fileID: 1763120827}
   - component: {fileID: 1763120826}
   - component: {fileID: 1763120825}
+  - component: {fileID: 1763120829}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -527,3 +579,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1763120829
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763120824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81e2a4146f934b544b250688046d21c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

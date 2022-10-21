@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - cardPrefab: {fileID: 4756750656096736302, guid: 6bad847843a0645e5aa66c7106ff2778, type: 3}
   - canvasRef: {instanceID: 0}
+  - randomWheelPrefab: {fileID: 6327514355178446167, guid: 8b4d9672ca673d94eab5dc3879583518, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
