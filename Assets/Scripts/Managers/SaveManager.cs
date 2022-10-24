@@ -65,9 +65,34 @@ namespace Managers
             DontDestroyOnLoad(gameObject);
         }
 
-        public void checkIfVPContinue (){
+        public void checkIfVPContinue (int group = 1){
+            GroupID = group;
+            switch (group)
+            {
+                 case 1:
+                    actualGroup = GroupInfo.Group1;
+                    break;
+                case 2:
+                    actualGroup = GroupInfo.Group2;
+                    break;
+                case 3:
+                    actualGroup = GroupInfo.Group3;
+                    break;
+            }
+
+            Debug.Log(_startTime.ToString());
+                    
+                    
             string input = FindObjectOfType<TMP_InputField>().text; //Check if VP input is okay and go to next level
-            if(input.Length > 0){
+            PlayerID = input;
+            Dictionary<string, string> _tempSave = new Dictionary<string, string>();
+            _tempSave.Add("playerID", PlayerID);
+            _tempSave.Add("group", actualGroup.ToString());
+            _tempSave.Add("startTime", _startTime.ToString());
+
+            allSaveData.Add(_tempSave);
+
+            if (input.Length > 0){
                 LevelManager.lm.nextLevel();
             }
         }
@@ -103,6 +128,17 @@ namespace Managers
         public void SaveBalloonData(BalloonData data)
         {
             _balloonData.Add(data);
+
+            Dictionary<string, string> _tempDic = new Dictionary<string, string>();             // Add Dictionary to all Save from Balloon Task
+            _tempDic.Add("ballonNum" + _balloonData.Count, data.balloonNumber.ToString());
+            _tempDic.Add("ballonType" + _balloonData.Count, data.balloonType.ToString());
+            _tempDic.Add("numOfPumps" + _balloonData.Count, data.numberOfPumps.ToString());
+            _tempDic.Add("didCashIn" + _balloonData.Count, data.didCashIn.ToString());
+            _tempDic.Add("didSecondCashIn" + _balloonData.Count, data.didSecondCashIn.ToString());
+            _tempDic.Add("earned" + _balloonData.Count, data.earned.ToString());
+            _tempDic.Add("totalEarned" + _balloonData.Count, data.totalEarned.ToString());
+
+            allSaveData.Add(_tempDic);
         }
         
         /// <summary>
@@ -116,29 +152,53 @@ namespace Managers
         // Create Title Line for CSV File
         private string CreateCSVTitle()
         {
-            string returnTitle = "ID, Group";
+            string returnTitle = "";
+            bool first = true;
 
-            string[] balloonDataTitles = new string[_balloonAmount];
+            foreach (var dic in allSaveData)
+            {
+                foreach (var elem in dic)
+                {
+                    returnTitle += (first?"":",") + elem.Key;
+                    first = false;
+                }
+            }
+
+          /*  string[] balloonDataTitles = new string[_balloonAmount];
             
             for (int i = 0; i < _balloonAmount; i++) {
                 balloonDataTitles[i] = $",{i}_Type,{i}_Earned,{i}_NumberOfPumps,{i}_TotalEarned,{i}_DidCashIn,{i}_DidSecondCashIn";
                 returnTitle += balloonDataTitles[i]; 
             }
-            
+            */
             return returnTitle;
         }
 
         // Create Data Entry Line for CSV File
         private string CreateCSVLine()
         {
-            string content = PlayerID + "_" + _startTime.Month +"_"+ _startTime.Day +"_"+ + _startTime.Hour +"_"+ _startTime.Minute + "," + GroupID;
-            string[] contentData = new string[_balloonAmount];
+            string content = "";
 
-            for (int i = 0; i < _balloonData.Count; i++) {
-                contentData[i] = $",{_balloonData[i].balloonType},{_balloonData[i].earned},{_balloonData[i].numberOfPumps},{_balloonData[i].totalEarned},{_balloonData[i].didCashIn},{_balloonData[i].didSecondCashIn}";
-                content += contentData[i]; 
+            bool first = true;
+
+            foreach (var dic in allSaveData)
+            {
+                foreach (var elem in dic)
+                {
+                    content += (first ? "" : ",") + elem.Value;
+                    first = false;
+                }
             }
 
+            /*  string content = PlayerID + "_" + _startTime.Month +"_"+ _startTime.Day +"_"+ + _startTime.Hour +"_"+ _startTime.Minute + "," + GroupID;
+              string[] contentData = new string[_balloonAmount];
+
+              for (int i = 0; i < _balloonData.Count; i++) {
+                  contentData[i] = $",{_balloonData[i].balloonType},{_balloonData[i].earned},{_balloonData[i].numberOfPumps},{_balloonData[i].totalEarned},{_balloonData[i].didCashIn},{_balloonData[i].didSecondCashIn}";
+                  content += contentData[i]; 
+              }
+
+            */
             return content; 
         }
 

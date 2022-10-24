@@ -142,9 +142,9 @@ namespace Managers
         private void UpdateUIText()
         {
             InGameHUD.BalloonNumberText.text = $"Ballon Nummer: {_currentBalloon + 1}/{_balloonAmount}";
-            InGameHUD.CurrentEarnedText.text = String.Format("Momentan verdient:  {0:0.00}", _currentEarned);
+            InGameHUD.CurrentEarnedText.text = String.Format("Momentan verdient:  {0:0}", _currentEarned);
             InGameHUD.NumberOfPumpsText.text = String.Format("Aufblas Anzahl: {0:0}", _currentNumberOfPumps);
-            InGameHUD.TotalEarnedText.text = String.Format("Gesamt verdient: {0:0.00}", _totalEarned);
+            InGameHUD.TotalEarnedText.text = String.Format("Gesamt verdient: {0:0}", _totalEarned);
 
             if (InGameHUD.OneMoreText.activeInHierarchy) {
                 InGameHUD.OneMoreText.SetActive(false);
@@ -183,7 +183,7 @@ namespace Managers
             _currentNumberOfPumps++;
             
             _currentEarned += AmountEarnedPerPump;
-            _totalEarned += AmountEarnedPerPump;
+           // _totalEarned += AmountEarnedPerPump;
             
             UpdateUIText();
             ScaleUIBalloon();
@@ -204,7 +204,7 @@ namespace Managers
                 InGameHUD.BalloonExplodeParticleSystem.Play();
                 
                 _didCashIn = false;
-                _totalEarned -= _currentEarned;
+              //  _totalEarned -= _currentEarned;
                 _currentEarned = 0.0f;
                 
                 //SoundManager.instance.PlayClip(SoundManager.sound.pop);
@@ -221,6 +221,7 @@ namespace Managers
             {
                 case BalloonType.standard:
                     _didCashIn = true;
+                    _totalEarned += _currentEarned;
                     
                     PlayCoinFXAtMousePos();
                     ContinueToNextBalloon();
@@ -229,7 +230,7 @@ namespace Managers
                     
                     if (_firstCashIn) {
                         // Play Robot Sound and disable buttons for clip length
-                        InGameHUD.OneMoreText.SetActive(true);
+                    //    InGameHUD.OneMoreText.SetActive(true);
                         var clipLength = SoundManager.instance.PlayRandomRobotClip(UnityEngine.Random.Range(0, 2));
                         StartCoroutine(DisableButtonForSeconds(clipLength));
                         
@@ -249,7 +250,9 @@ namespace Managers
                         _firstCashIn = true;
                         
                         InGameHUD.OneMoreText.SetActive(false);
-                        
+
+                        _totalEarned += _currentEarned;
+
                         PlayCoinFXAtMousePos();
                         ContinueToNextBalloon();
                     }

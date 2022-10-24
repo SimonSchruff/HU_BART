@@ -26,7 +26,18 @@ namespace Managers
             DontDestroyOnLoad(gameObject);
         }
         public void nextLevel () {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+            Debug.Log(SceneManager.sceneCountInBuildSettings + "scenecount   " + SceneManager.GetActiveScene().buildIndex + "bi");
+            if(SceneManager.sceneCountInBuildSettings == SceneManager.GetActiveScene().buildIndex + 1)
+            {
+                Debug.Log("SAVE");
+                SaveManager.instance.WriteCSVFile();
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+
+            }
+
         }
     }
 }
