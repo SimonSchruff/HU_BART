@@ -61,11 +61,13 @@ namespace Managers
                 instance = this;
             else
                 Destroy(this);
+
             
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this);
         }
 
-        public void checkIfVPContinue (int group = 1){
+        public void checkIfVPContinuee (int group = 1){
+            Debug.Log("Button click");
             GroupID = group;
             switch (group)
             {
@@ -85,10 +87,12 @@ namespace Managers
                     
             string input = FindObjectOfType<TMP_InputField>().text; //Check if VP input is okay and go to next level
             PlayerID = input;
-            Dictionary<string, string> _tempSave = new Dictionary<string, string>();
-            _tempSave.Add("playerID", PlayerID);
-            _tempSave.Add("group", actualGroup.ToString());
-            _tempSave.Add("startTime", _startTime.ToString());
+            Dictionary<string, string> _tempSave = new Dictionary<string, string>
+            {
+                { "playerID", PlayerID },
+                { "group", actualGroup.ToString() },
+                { "startTime", _startTime.ToString() }
+            };
 
             allSaveData.Add(_tempSave);
 
@@ -99,7 +103,7 @@ namespace Managers
 
         private void Start() 
         {
-            _startTime = System.DateTime.Now;
+            _startTime = DateTime.Now;
 
            // var newDir = Directory.CreateDirectory(Application.persistentDataPath + "/HU_BART_Data");
            switch (SelectedSaveLocation)
@@ -112,8 +116,8 @@ namespace Managers
                    break;
            }
 
-           string date = $"{System.DateTime.Now.Day}_{System.DateTime.Now.Month}";
-           _fileName = $"/HU_BART_TestData_{date}.csv";
+           string date = $"{DateTime.Now.Day}_{DateTime.Now.Month}";
+           _fileName = "/HU_BART_Data.csv";
         }
         
         public void StartPostCoroutine()

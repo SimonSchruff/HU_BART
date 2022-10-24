@@ -35,7 +35,6 @@ namespace Managers
             else
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
-
             }
 
         }

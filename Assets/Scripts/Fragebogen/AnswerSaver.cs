@@ -29,6 +29,11 @@ public class AnswerSaver : MonoBehaviour
         other
     }
 
+    public void checkIfCont(int index = 1)
+    {
+        SaveManager.instance.checkIfVPContinuee(index);
+    }
+
     void Awake()
     {
         switch(questionType) {
