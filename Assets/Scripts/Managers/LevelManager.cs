@@ -31,12 +31,12 @@ namespace Managers
             {
                 Debug.Log("SAVE");
                 SaveManager.instance.WriteCSVFile();
+                Application.Quit();
             }
             else
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
             }
-
         }
     }
 }

@@ -5,20 +5,25 @@ using UnityEngine;
 
 public class SimpleContinueToNextLevel : MonoBehaviour
 {
+    [SerializeField] bool onlyContinue = false;
     SaveManager sm = SaveManager.instance;
     // Start is called before the first frame update
     public void loadNextLevelAndSave()
     {
-        ScrollRootScript [] srs = FindObjectsOfType<ScrollRootScript>();
-        foreach (var sr in srs)
+        if (!onlyContinue)
         {
-            QuestionCheckMulti[] children = sr.GetComponentsInChildren<QuestionCheckMulti>();
-            foreach (var ch in children)
+            ScrollRootScript [] srs = FindObjectsOfType<ScrollRootScript>();
+            foreach (var sr in srs)
             {
-                sm.allSaveData.Add(ch.saveDictionary);
+                QuestionCheckMulti[] children = sr.GetComponentsInChildren<QuestionCheckMulti>();
+                foreach (var ch in children)
+                {
+                    sm.allSaveData.Add(ch.saveDictionary);
+                }
             }
+            SaveManager.instance.finishSavingAndCloseProgram();
         }
-        SaveManager.instance.finishSavingAndCloseProgram();
+
 
         LevelManager.lm.nextLevel();
     }
