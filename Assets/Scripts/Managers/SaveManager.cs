@@ -54,6 +54,10 @@ namespace Managers
         // Private Vars
         private int _balloonAmount; 
 
+        public string getFileLoc()
+        {
+            return _fileLoc;
+        }
         
         void Awake() 
         {
@@ -64,40 +68,42 @@ namespace Managers
 
             
             DontDestroyOnLoad(this);
+
+            Debug.Log(SelectedSaveLocation);
         }
 
         public void checkIfVPContinuee (int group = 1){
             Debug.Log("Button click");
-            GroupID = group;
-            switch (group)
-            {
-                 case 1:
-                    actualGroup = GroupInfo.Group1;
-                    break;
-                case 2:
-                    actualGroup = GroupInfo.Group2;
-                    break;
-                case 3:
-                    actualGroup = GroupInfo.Group3;
-                    break;
-            }
 
-            Debug.Log(_startTime.ToString());
-                    
-                    
             string input = FindObjectOfType<TMP_InputField>().text; //Check if VP input is okay and go to next level
-            PlayerID = input;
-            Dictionary<string, string> _tempSave = new Dictionary<string, string>
-            {
-                { "playerID", PlayerID },
-                { "group", actualGroup.ToString() },
-                { "startTime", _startTime.ToString() }
-            };
-
-            allSaveData.Add(_tempSave);
-
             if (input.Length > 0){
-                LevelManager.lm.nextLevel();
+                GroupID = group;
+                switch (group)
+                {
+                     case 1:
+                        actualGroup = GroupInfo.Group1;
+                        break;
+                    case 2:
+                        actualGroup = GroupInfo.Group2;
+                        break;
+                    case 3:
+                        actualGroup = GroupInfo.Group3;
+                        break;
+                }
+
+                Debug.Log(_startTime.ToString());
+                    
+                    
+                PlayerID = input;
+                Dictionary<string, string> _tempSave = new Dictionary<string, string>
+                {
+                    { "playerID", PlayerID },
+                    { "group", actualGroup.ToString() },
+                    { "startTime", _startTime.ToString() }
+                };
+
+                allSaveData.Add(_tempSave);
+                    LevelManager.lm.nextLevel();
             }
         }
 
@@ -112,13 +118,17 @@ namespace Managers
                    _fileLoc = Application.dataPath + "/SaveData/";
                    break; 
                case SaveLocation.Android:
-                   _fileLoc = Application.persistentDataPath + "/";
+                    _fileLoc = Application.persistentDataPath + "/BART_Studie/";
+                 //  _fileLoc = "/storage/emulated/0/BART_Studie/";
                    break;
            }
 
            string date = $"{DateTime.Now.Day}_{DateTime.Now.Month}";
            _fileName = "/HU_BART_Data.csv";
+
+            createSaveDir();
         }
+
         
         public void StartPostCoroutine()
         {
@@ -204,6 +214,20 @@ namespace Managers
 
             */
             return content; 
+        }
+
+        public void createSaveDir()
+        {
+            if (!Directory.Exists(_fileLoc))
+            {
+                Directory.CreateDirectory(_fileLoc);
+            }
+
+            /*     if(SelectedSaveLocation == SaveLocation.Android && !Directory.Exists("/storage/emulated/0/BART_Studie"))
+                 {
+                     Directory.CreateDirectory("/storage/emulated/0/BART_Studie");
+                 }
+            */
         }
 
         /// <summary>

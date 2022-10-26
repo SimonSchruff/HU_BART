@@ -160,7 +160,7 @@ MonoBehaviour:
   actualGroup: 1
   roundDefiniton:
   - isRobotTalking: 0
-    questionText: " Was bedeutet Freundschaft f\xFCr dich?"
+    questionText: "Was bedeutet Freundschaft f\xFCr dich?"
     audioFileGr_1: {fileID: 0}
     audioFileGr_2: {fileID: 0}
     audioFileGr_3: {fileID: 0}
