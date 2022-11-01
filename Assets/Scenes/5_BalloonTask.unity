@@ -2340,10 +2340,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5b6a4a938b6490380b165d5ee85846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotRateSoundWinGr1:
+  - {fileID: 8300000, guid: 48040a29c318b42f89f40f4be11b0f49, type: 3}
+  - {fileID: 8300000, guid: 346b84d5d5c064d4d9c1479d28e83061, type: 3}
+  - {fileID: 8300000, guid: b1df9ea43683d4a3bb238ab2ea3411a1, type: 3}
+  robotRateSoundWinGr2:
+  - {fileID: 8300000, guid: f555c0b38dbbc4faaaa469f74926598e, type: 3}
+  - {fileID: 8300000, guid: ebfe17aa112384da2a4f377a3a88afe4, type: 3}
+  - {fileID: 8300000, guid: e1fe62a7a57ef4325a74275e2c4b0816, type: 3}
+  robotRateSoundWinGr3:
+  - {fileID: 8300000, guid: 14399990435b64476b359e46c1225ba6, type: 3}
+  - {fileID: 8300000, guid: 20269be4c064146bf8dbfcea770fe1a4, type: 3}
+  - {fileID: 8300000, guid: a95eef5a0ddc84ce0805c6cd4f6b3abc, type: 3}
+  robotRateSoundLossGr1:
+  - {fileID: 8300000, guid: ee3a61ef200c8464abd7b462f6270c19, type: 3}
+  - {fileID: 8300000, guid: 88fd14cc73fc84f4bb650a212f03c487, type: 3}
+  - {fileID: 8300000, guid: dfe7d4d9dadd344eeb7f113270a6e549, type: 3}
+  robotRateSoundLossGr2:
+  - {fileID: 8300000, guid: a9aa8cbaa3a5a4a69bb9f3182cf5cf67, type: 3}
+  - {fileID: 8300000, guid: 108cfd97db1ce4e05b91519d518e9c37, type: 3}
+  - {fileID: 8300000, guid: 4f6cd07c218904b8a896af0af01eaaf4, type: 3}
+  robotRateSoundLossGr3:
+  - {fileID: 8300000, guid: 1993ad026a1904e679401c1ace8b72ae, type: 3}
+  - {fileID: 8300000, guid: 8146b383aea5e4039ad4c4a6222893d1, type: 3}
+  - {fileID: 8300000, guid: 301bbd62b09bc4d0ab8c85e44d2cd0a7, type: 3}
   RobotSounds:
-  - {fileID: 8300000, guid: b4903bd41d2174e06babef36802a6f04, type: 3}
-  - {fileID: 8300000, guid: 0d7d0acce3c8842cba03bbc36804dedc, type: 3}
-  - {fileID: 8300000, guid: 1c56a50ec72ed4e6f83bb03b7b9f1376, type: 3}
+  - {fileID: 8300000, guid: 4ba5a72b74ae34671a841e9c07be532f, type: 3}
+  - {fileID: 8300000, guid: 4ba5a72b74ae34671a841e9c07be532f, type: 3}
+  - {fileID: 8300000, guid: 76aab73d614a14e94994e0a3ea9621c8, type: 3}
   InflateSound: {fileID: 8300000, guid: 0a2d74cef28994ef3a8c96b29277adaf, type: 3}
   PopSound: {fileID: 8300000, guid: 7ae444633dd3e4f20bc53c7f1dc4e026, type: 3}
 --- !u!82 &413331145
@@ -7910,7 +7934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Aufblas Anzahl: 0'
+  m_text: "Anzahl Luftst\xF6\xDFe: 0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10076,7 +10100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ballon Aufblasen
+  m_text: Ballon aufblasen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10686,7 +10710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Betrag Einkassieren
+  m_text: Betrag einkassieren
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11140,19 +11164,19 @@ MonoBehaviour:
   - MaxPumps: 10
     Type: 0
   - MaxPumps: 25
-    Type: 0
+    Type: 2
   - MaxPumps: 15
-    Type: 0
+    Type: 2
   - MaxPumps: 20
     Type: 0
   - MaxPumps: 30
     Type: 1
   - MaxPumps: 20
-    Type: 0
+    Type: 2
   - MaxPumps: 5
     Type: 0
   - MaxPumps: 30
-    Type: 1
+    Type: 2
   - MaxPumps: 15
     Type: 0
   - MaxPumps: 30
@@ -11160,7 +11184,7 @@ MonoBehaviour:
   - MaxPumps: 30
     Type: 1
   - MaxPumps: 10
-    Type: 0
+    Type: 2
   - MaxPumps: 25
     Type: 0
   - MaxPumps: 30

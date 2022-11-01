@@ -25,25 +25,25 @@ namespace Managers
             
             DontDestroyOnLoad(gameObject);
         }
-        public void nextLevel () {
+        public void nextLevel (bool saveGame = false) {
             Debug.Log(SceneManager.sceneCountInBuildSettings + "scenecount   " + SceneManager.GetActiveScene().buildIndex + "bi");
-            if(SceneManager.sceneCountInBuildSettings == SceneManager.GetActiveScene().buildIndex + 1)
+            if(SceneManager.sceneCountInBuildSettings == SceneManager.GetActiveScene().buildIndex + 1 || saveGame)
             {
                 Debug.Log("SAVE");
                 SaveManager.instance.WriteCSVFile();
          //       SceneManager.LoadScene(0);
 
-                try
-                {
-                    openChromeBrowser();
-                }
-                catch
-                {
-                    Debug.Log("Propably NOT Android");
-                }
+      //          try
+        //        {
+          //          openChromeBrowser();
+            //    }
+              //  catch
+      //          {
+        //            Debug.Log("Propably NOT Android");
+          //      }
 
             }
-            else
+            if (SceneManager.sceneCountInBuildSettings != SceneManager.GetActiveScene().buildIndex + 1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
             }

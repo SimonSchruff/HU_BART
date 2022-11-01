@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/2.2_Start_Questions.unity
     guid: f87b984a5691c4ebd98466fbd1a6abcd
   - enabled: 1
-    path: Assets/Scenes/3_QA_Game.unity
+    path: Assets/Scenes/3.0_Introduction_QA.unity
+    guid: d8301782a207848bb8cb762e6e8374d7
+  - enabled: 1
+    path: Assets/Scenes/3.1_QA_Game.unity
     guid: d1abde57484654c1b8828a656a9933f0
   - enabled: 1
     path: Assets/Scenes/4.1_Start_Questions.unity
@@ -32,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/5_BalloonTask.unity
     guid: c97af01f834f14a3ea1ea01aa1f79aa6
+  - enabled: 1
+    path: Assets/Scenes/5.1_Ende.unity
+    guid: 702a51416c31b46d29d28b77af66651b
   m_configObjects: {}

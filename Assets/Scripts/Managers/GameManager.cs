@@ -14,7 +14,8 @@ namespace Managers
         [Serializable]
         public enum BalloonType {
             standard,
-            oneMore
+            oneMore,
+            robotRateAfter
         }
 
         [Serializable]
@@ -82,6 +83,7 @@ namespace Managers
         {
             _initialBalloonScaleValue = InGameHUD.BalloonSprite.localScale.x;
             _balloonAmount = Balloons.Count;
+        
             UpdateUIText();
         }
 
@@ -99,7 +101,7 @@ namespace Managers
             // Continue to part after game
             if (_currentBalloon >= _balloonAmount) {
                 // Last trial
-                LevelManager.lm.nextLevel();
+                LevelManager.lm.nextLevel(true);
             }
         }
 
@@ -142,9 +144,9 @@ namespace Managers
         private void UpdateUIText()
         {
             InGameHUD.BalloonNumberText.text = $"Ballon Nummer: {_currentBalloon + 1}/{_balloonAmount}";
-            InGameHUD.CurrentEarnedText.text = String.Format("Momentan verdient:  {0:0}", _currentEarned);
-            InGameHUD.NumberOfPumpsText.text = String.Format("Aufblas Anzahl: {0:0}", _currentNumberOfPumps);
-            InGameHUD.TotalEarnedText.text = String.Format("Gesamt verdient: {0:0}", _totalEarned);
+            InGameHUD.CurrentEarnedText.text = String.Format("Aktueller Betrag:  {0:0}ct", _currentEarned);
+            InGameHUD.NumberOfPumpsText.text = String.Format("Anzahl Luftstöße: {0:0}", _currentNumberOfPumps);
+            InGameHUD.TotalEarnedText.text = String.Format("Gesamtbetrag: {0:0}ct", _totalEarned);
 
             if (InGameHUD.OneMoreText.activeInHierarchy) {
                 InGameHUD.OneMoreText.SetActive(false);
@@ -206,7 +208,11 @@ namespace Managers
                 _didCashIn = false;
               //  _totalEarned -= _currentEarned;
                 _currentEarned = 0.0f;
-                
+
+                if(Balloons[_currentBalloon].Type == BalloonType.robotRateAfter)
+                {
+                    SoundManager.instance.PlayRobotRateSound(false);
+                }
                 //SoundManager.instance.PlayClip(SoundManager.sound.pop);
                 ContinueToNextBalloon();
                 return;
@@ -231,7 +237,7 @@ namespace Managers
                     if (_firstCashIn) {
                         // Play Robot Sound and disable buttons for clip length
                     //    InGameHUD.OneMoreText.SetActive(true);
-                        var clipLength = SoundManager.instance.PlayRandomRobotClip(UnityEngine.Random.Range(0, 2));
+                        var clipLength = SoundManager.instance.PlayRandomRobotClip();
                         StartCoroutine(DisableButtonForSeconds(clipLength));
                         
                         // Ensure Balloon has enough pumps left
@@ -256,6 +262,14 @@ namespace Managers
                         PlayCoinFXAtMousePos();
                         ContinueToNextBalloon();
                     }
+                    break;
+                case BalloonType.robotRateAfter:
+                    _didCashIn = true;
+                    _totalEarned += _currentEarned;
+
+                    PlayCoinFXAtMousePos();
+                    ContinueToNextBalloon();
+                    SoundManager.instance.PlayRobotRateSound(true);
                     break;
             }
         }

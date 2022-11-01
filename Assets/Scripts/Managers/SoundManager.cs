@@ -5,6 +5,12 @@ namespace Managers
 {
     public class SoundManager : MonoBehaviour
     {
+        [SerializeField] AudioClip[] robotRateSoundWinGr1;
+        [SerializeField] AudioClip[] robotRateSoundWinGr2;
+        [SerializeField] AudioClip[] robotRateSoundWinGr3;
+        [SerializeField] AudioClip[] robotRateSoundLossGr1;
+        [SerializeField] AudioClip[] robotRateSoundLossGr2;
+        [SerializeField] AudioClip[] robotRateSoundLossGr3;
         public static SoundManager instance;
     
     
@@ -42,13 +48,23 @@ namespace Managers
         /// </summary>
         /// <param name="index">Index of clip in RobotSounds[]</param>
         /// <returns>Length of played clip in seconds; If source or clip is null, method returns 0;</returns>
-        public float PlayRandomRobotClip(int index)
+        public float PlayRandomRobotClip()
         {
-            if (!_source || !RobotSounds[index])
-                return 0.0f;
-
             _source.Stop();
-            _source.clip = RobotSounds[index];
+
+            switch (SaveManager.instance.actualGroup)
+            {
+                case SaveManager.GroupInfo.Group1:
+                    _source.clip = RobotSounds[0];
+                    break;
+                case SaveManager.GroupInfo.Group2:
+                    _source.clip = RobotSounds[1];
+                    break;
+                case SaveManager.GroupInfo.Group3:
+                    _source.clip = RobotSounds[2];
+                    break;
+
+            }
             _source.Play();
 
             return _source.clip.length;
@@ -73,6 +89,27 @@ namespace Managers
             }
             
             _source.Play();
+        }
+
+        public void PlayRobotRateSound(bool win)
+        {
+            switch (SaveManager.instance.actualGroup)
+            {
+                case SaveManager.GroupInfo.Group1:
+                    _source.clip = win ? getRandomElem(robotRateSoundWinGr1) : getRandomElem(robotRateSoundLossGr1);
+                    break;
+                case SaveManager.GroupInfo.Group2:
+                    _source.clip = win ? getRandomElem(robotRateSoundWinGr2) : getRandomElem(robotRateSoundLossGr2);
+                    break;
+                case SaveManager.GroupInfo.Group3:
+                    _source.clip = win ? getRandomElem(robotRateSoundWinGr3) : getRandomElem(robotRateSoundLossGr3);
+                    break;
+            }
+            _source.Play();
+        }
+        AudioClip getRandomElem (AudioClip [] inputArray)
+        {
+            return inputArray[(Random.Range(0, inputArray.Length - 1))];
         }
     }
 }
