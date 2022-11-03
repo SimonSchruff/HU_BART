@@ -33,6 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/4.3_AfterAQ_Questions.unity
     guid: a1b3a4263579d8147ba87671e88a455c
   - enabled: 1
+    path: Assets/Scenes/5.0_Introduction_QA.unity
+    guid: 1cf01f60d31a447b9ba28cefeaf5f732
+  - enabled: 1
     path: Assets/Scenes/5_BalloonTask.unity
     guid: c97af01f834f14a3ea1ea01aa1f79aa6
   - enabled: 1

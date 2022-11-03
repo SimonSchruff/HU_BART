@@ -11160,7 +11160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Balloons:
   - MaxPumps: 30
-    Type: 0
+    Type: 2
   - MaxPumps: 10
     Type: 0
   - MaxPumps: 25
