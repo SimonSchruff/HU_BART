@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
+using Managers;
 
 namespace Managers
 {
@@ -77,10 +79,21 @@ namespace Managers
             // Subscribe to button events
             InGameHUD.CashInButton.onClick.AddListener(CashIn);
             InGameHUD.InflateButton.onClick.AddListener(InflateBalloon);
+        
+        }
+
+            IEnumerator sendCoins (){
+                UnityWebRequest www = UnityWebRequest.Get("https://83.229.84.127:5500/setgeld?amount="+110);
+                // UnityWebRequest www = UnityWebRequest.Get("https://83.229.84.127:5500/setgeld?amount="+totalEarned);
+                yield return www.SendWebRequest();
+                Debug.Log("DID SOMETHING");
+                // openNextScene();
         }
 
         private void Start()
         {
+           // StartCoroutine(sendCoins());
+
             _initialBalloonScaleValue = InGameHUD.BalloonSprite.localScale.x;
             _balloonAmount = Balloons.Count;
         
@@ -128,6 +141,7 @@ namespace Managers
             data.didSecondCashIn = _didSecondCashIn;
             data.earned = _currentEarned;
             data.totalEarned = _totalEarned;
+            LevelManager.lm.totalEarned = _totalEarned;
 
             SaveManager.instance.SaveBalloonData(data);
         }

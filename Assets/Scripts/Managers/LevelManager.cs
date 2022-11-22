@@ -2,6 +2,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 using UnityEngine;
 
 
@@ -11,6 +12,7 @@ namespace Managers
     public class LevelManager : MonoBehaviour
     {
         public static LevelManager lm;
+        public float totalEarned = 0; 
 
         // Private Vars
         private int _balloonAmount; 
@@ -41,13 +43,25 @@ namespace Managers
       //          {
         //            Debug.Log("Propably NOT Android");
           //      }
-
+                StartCoroutine(sendCoins());
+            } else {
+                openNextScene();
             }
+        }
+        
+        IEnumerator sendCoins (){
+           // UnityWebRequest www = UnityWebRequest.Get("https://83.229.84.127:5500/setgeld?amount="+100);
+             UnityWebRequest www = UnityWebRequest.Get("https://83.229.84.127:5500/setgeld?amount="+totalEarned);
+            yield return www.SendWebRequest();
+            openNextScene();
+        }
+
+        void openNextScene (){
             if (SceneManager.sceneCountInBuildSettings != SceneManager.GetActiveScene().buildIndex + 1)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
             }
-        }
+        } 
 
         public void openChromeBrowser()
         {
