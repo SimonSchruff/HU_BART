@@ -3417,8 +3417,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 951.5, y: 0}
-  m_SizeDelta: {x: 1903, y: 0}
+  m_AnchoredPosition: {x: 1911.5, y: 0}
+  m_SizeDelta: {x: 3823, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89604071
 MonoBehaviour:
@@ -3438,9 +3438,8 @@ MonoBehaviour:
   legendStartText: LegendStartText
   checkboxTextSize: 35
   oneQuestionDef:
-  - questionText: "Ich w\xFCrde so etwas wie ein pers\xF6nliches Verlustgef\xFChl
-      empfinden, wenn ich nicht mehr auf den \LRat dieses Roboters zur\xFCckgreifen
-      k\xF6nnte."
+  - questionText: "Ich werde so etwas wie ein pers\xF6nliches Verlustgef\xFChl empfinden,
+      wenn ich nicht mehr auf den Rat dieses Roboters zur\xFCckgreifen k\xF6nnte."
     saveName: affective_trust_before_1
     isDoppleLegend: 0
     seclegendText:
@@ -3451,8 +3450,8 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Wenn ich mit diesem Roboter \xFCber meine Probleme sprechen w\xFCrde,
-      dann h\xE4tte ich das Gef\xFChl, \Ldass er mitf\xFChlend darauf reagieren w\xFCrde."
+  - questionText: "Wenn ich mit diesem Roboter \xFCber meine Probleme spreche, dann
+      werde ich das Gef\xFChl haben, dass er mitf\xFChlend darauf reagiert."
     saveName: affective_trust_before_2
     isDoppleLegend: 0
     seclegendText:
@@ -3463,7 +3462,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xFCrde sich als Teil des Teams verstehen."
+  - questionText: Dieser Roboter wird sich als Teil des Teams verstehen.
     saveName: affective_trust_before_3
     isDoppleLegend: 0
     seclegendText:
@@ -3474,8 +3473,8 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xFCrde sich durch eine warme und mitf\xFChlende
-      Art mir gegen\xFCber auszeichnen."
+  - questionText: "Dieser Roboter wird sich durch eine warme und mitf\xFChlende Art
+      mir gegen\xFCber auszeichnen."
     saveName: affective_trust_before_4
     isDoppleLegend: 0
     seclegendText:
@@ -3486,7 +3485,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xFCrde sich kooperativ verhalten."
+  - questionText: Dieser Roboter wird sich kooperativ verhalten.
     saveName: affective_trust_before_5
     isDoppleLegend: 0
     seclegendText:
@@ -3497,8 +3496,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xFCrde den Unterschied zwischen Freund und Feind
-      kennen."
+  - questionText: Dieser Roboter wird den Unterschied zwischen Freund und Feind kennen.
     saveName: affective_trust_before_6
     isDoppleLegend: 0
     seclegendText:
@@ -3509,7 +3507,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xE4re intelligent."
+  - questionText: Dieser Roboter wird sich als intelligent herausstellen.
     saveName: affective_trust_before_7
     isDoppleLegend: 0
     seclegendText:
@@ -3520,7 +3518,8 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xE4re in der Lage, auf ein gemeinsames Ziel hinzuarbeiten."
+  - questionText: Dieser Roboter wird in der Lage sein, auf ein gemeinsames Ziel
+      hinzuarbeiten.
     saveName: affective_trust_before_8
     isDoppleLegend: 0
     seclegendText:
@@ -3531,7 +3530,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xE4re verantwortungsvoll."
+  - questionText: Dieser Roboter wird sich als verantwortungsvoll herausstellen.
     saveName: affective_trust_before_9
     isDoppleLegend: 0
     seclegendText:
@@ -3542,7 +3541,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xE4re selbstst\xE4ndig."
+  - questionText: "Dieser Roboter wird sich als selbstst\xE4ndig herausstellen."
     saveName: affective_trust_before_10
     isDoppleLegend: 0
     seclegendText:
@@ -65037,8 +65036,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 951.5, y: 0}
-  m_SizeDelta: {x: 1903, y: 0}
+  m_AnchoredPosition: {x: 1911.5, y: 0}
+  m_SizeDelta: {x: 3823, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614615021
 MonoBehaviour:
@@ -65058,7 +65057,7 @@ MonoBehaviour:
   legendStartText: LegendStartText
   checkboxTextSize: 35
   oneQuestionDef:
-  - questionText: "Dieser Roboter w\xFCrde eindeutig kommunizieren."
+  - questionText: Dieser Roboter wird eindeutig kommunizieren.
     saveName: cognitive_trust_before_1
     isDoppleLegend: 0
     seclegendText:
@@ -65069,7 +65068,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Der Umgang mit diesem Roboter w\xE4re f\xFCr mich sicher."
+  - questionText: "Der Umgang mit diesem Roboter wird  f\xFCr mich sicher sein."
     saveName: cognitive_trust_before_2
     isDoppleLegend: 0
     seclegendText:
@@ -65080,7 +65079,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xFCrde zuverl\xE4ssig meinen Anweisungen folgen."
+  - questionText: "Dieser Roboter wird zuverl\xE4ssig meinen Anweisungen folgen."
     saveName: cognitive_trust_before_3
     isDoppleLegend: 0
     seclegendText:
@@ -65091,7 +65090,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xFCrde sich widerspruchsfrei verhalten."
+  - questionText: Dieser Roboter wird sich widerspruchsfrei verhalten.
     saveName: cognitive_trust_before_4
     isDoppleLegend: 0
     seclegendText:
@@ -65102,8 +65101,8 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xFCrde eine Aufgabe besser als ein menschlicher
-      Novize erledigen."
+  - questionText: Dieser Roboter wird eine Aufgabe besser als ein menschlicher Novize
+      erledigen.
     saveName: cognitive_trust_before_5
     isDoppleLegend: 0
     seclegendText:
@@ -65125,7 +65124,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xE4re zuverl\xE4ssig."
+  - questionText: "Dieser Roboter wird zuverl\xE4ssig sein."
     saveName: cognitive_trust_before_7
     isDoppleLegend: 0
     seclegendText:
@@ -65136,7 +65135,7 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Dieser Roboter w\xE4re vorhersagbar."
+  - questionText: Dieser Roboter wird vorhersagbar sein.
     saveName: cognitive_trust_before_8
     isDoppleLegend: 0
     seclegendText:
@@ -65147,8 +65146,8 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Mir w\xE4re es wichtig, im Nachhinein zu kontrollieren, wie gut
-      dieser Roboter eine Aufgabe erledigt\L hat."
+  - questionText: "Mir ist es wichtig, im Nachhinein zu kontrollieren, wie gut dieser
+      Roboter eine Aufgabe erledigt\L hat."
     saveName: cognitive_trust_before_9
     isDoppleLegend: 0
     seclegendText:
@@ -65159,8 +65158,8 @@ MonoBehaviour:
       minValue: 0
       maxValue: 0
     isTextInput: 0
-  - questionText: "Mir w\xE4re es wichtig, diesen Roboter jederzeit abschalten zu
-      k\xF6nnen."
+  - questionText: "Mir wird es wichtig sein, diesen Roboter jederzeit abschalten
+      zu k\xF6nnen."
     saveName: cognitive_trust_before_10
     isDoppleLegend: 0
     seclegendText:
@@ -80850,8 +80849,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969883046}
   m_HandleRect: {fileID: 969883045}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.3468649
+  m_Value: 1.0000005
+  m_Size: 0.78094846
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -86157,6 +86156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca389f7aea9134cf59296d71973d8c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onlyContinue: 0
 --- !u!222 &1358539420930356904
 CanvasRenderer:
   m_ObjectHideFlags: 0

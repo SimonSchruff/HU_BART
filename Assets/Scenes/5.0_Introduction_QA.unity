@@ -975,16 +975,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Als n\xE4chstes spielen Sie und Sawyer zusammen das \u201EBallon Spiell\u201C.\nSie
     werden nun nacheinander <b>16 Luftballons</b> am Bildschirm sehen. Mit einem
-    Klick auf den Button \"AUFBLASEN\" k\xF6nnen Sie jeden Ballon etwas <b>aufblasen</b>.
+    Klick auf den Button \"Ballon aufblasen\" k\xF6nnen Sie jeden Ballon etwas <b>aufblasen</b>.
     Jeder Klick bl\xE4st den Ballon etwas mehr auf.\nAber der Luftballon kann <b>platzen</b>,
-    wenn Sie ihn zu stark aufblasen. Sie m\xFCssen entscheiden, wie stark sie jeden
+    wenn Sie ihn zu stark aufblasen. Sie m\xFCssen entscheiden, wie stark Sie jeden
     Ballon aufblasen. Manche Luftballons k\xF6nnten bereits nach dem ersten Klick
     platzen. Andere k\xF6nnten erst platzen, wenn Sie den ganzen Bildschirm ausf\xFCllen.\nF\xFCr
     jeden Klick erhalten Sie <b>einen Cent</b>. Aber wenn der Luftballon platzt,
     verlieren Sie das bisher verdiente Geld f\xFCr den Ballon. Um das Geld f\xFCr
     einen Ballon zu behalten, blasen Sie ihn nicht weiter auf, sondern klicken Sie
-    auf den Button \"SAMMELN\".\nJedes Mal, nachdem Sie das Geld f\xFCr einen Ballon
-    gesammelt haben, oder der Ballon platzt, erscheint ein neuer Luftballon."
+    auf den Button \"Betrag einkassieren\".\nJedes Mal, nachdem Sie das Geld f\xFCr
+    einen Ballon gesammelt haben, oder der Ballon platzt, erscheint ein neuer Luftballon.
+    \nSie alleine entscheiden \xFCber das Aufblasen der Luftballons, Sawyer wird
+    Ihnen nur als Hilfe zur Seite stehen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1762,8 +1764,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969883046}
   m_HandleRect: {fileID: 969883045}
   m_Direction: 2
-  m_Value: 1.0000085
-  m_Size: 0.9675105
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

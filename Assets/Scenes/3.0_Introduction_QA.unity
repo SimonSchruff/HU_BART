@@ -976,10 +976,10 @@ MonoBehaviour:
   m_text: "Als erstes spielen Sie und Sawyer zusammen das \"Frage-Antwort-Spiel\u201C.\n\nEs
     werden nacheinander zuf\xE4llig Fragen aus einem Fragenkatalog erscheinen.\nSie
     und Sawyer lesen sich die Fragen im Wechsel vor. Der jeweils andere beantwortet
-    die Fragen.\nSind Sie an der Reihe des Fragenden, lesen Sie die Frage f\xFCr
-    Sawyer vor.\nSind Sie an der Reihe des Antwortenden, antworten Sie auf die Frage
-    von Sawyer.\n\nSie beginnen mit der ersten Frage. Bitte stellen sie die Frage
-    an den Roboter Sawjer"
+    die Fragen.\nSind Sie an der Reihe als Fragende*r, lesen Sie die Frage f\xFCr
+    Sawyer vor.\nSind Sie an der Reihe als Antwortende*r, antworten Sie auf die Frage
+    von Sawyer.\n\nSie beginnen mit der ersten Frage. Bitte stellen Sie die Frage
+    an den Sawyer Roboter."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1757,8 +1757,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969883046}
   m_HandleRect: {fileID: 969883045}
   m_Direction: 2
-  m_Value: 1.0000085
-  m_Size: 0.9675105
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

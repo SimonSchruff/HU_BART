@@ -761,10 +761,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Herzlich Willkommen\n\nzur Studie \u201ESpielerische Interaktion mit dem
-    Sawyer Roboter\u201C\n\nIn den n\xE4chsten 30 Minuten werden Sie einige Spiele
-    zusammen mit dem Roboter Sawyer spielen. Im Anschluss werden Sie wiederholt gebeten
-    Fragen zu ihrer Erfahrung und ihrer Meinung zu beantworten. F\xFCr den Erfolg
-    der Studie ist es wichtig, dass Sie die Frageb\xF6gen vollst\xE4ndig ausf\xFCllen.\n\nVielen
+    Sawyer Roboter\u201C.\n\nIn den n\xE4chsten 30 Minuten werden Sie einige Spiele
+    zusammen mit dem Roboter Sawyer spielen. Im Anschluss werden Sie gebeten, Fragen
+    zu Ihrer Erfahrung und Ihrer Meinung \xFCber Sawyer zu beantworten. F\xFCr den
+    Erfolg der Studie ist es wichtig, dass Sie die Frageb\xF6gen vollst\xE4ndig ausf\xFCllen.\n\nVielen
     Dank f\xFCr Ihre Teilnahme."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1543,8 +1543,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969883046}
   m_HandleRect: {fileID: 969883045}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 1.0000006
+  m_Size: 0.5370076
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
