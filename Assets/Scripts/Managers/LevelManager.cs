@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using UnityEngine;
-
-
+using System.Net;
+using System.IO;
 
 namespace Managers
 {
@@ -26,7 +26,20 @@ namespace Managers
                 Destroy(this);
             
             DontDestroyOnLoad(gameObject);
+
+            geld();
         }
+
+            void geld (){
+                var request = WebRequest.Create("https://83.229.84.127:5500/setgeld?amount="+110);
+                request.Method = "GET";
+                using var webResponse = request.GetResponse();
+                using var webStream = webResponse.GetResponseStream();
+
+                using var reader = new StreamReader(webStream);
+                var data = reader.ReadToEnd();
+                Debug.Log(data);
+            }
         public void nextLevel (bool saveGame = false) {
             Debug.Log(SceneManager.sceneCountInBuildSettings + "scenecount   " + SceneManager.GetActiveScene().buildIndex + "bi");
             if(SceneManager.sceneCountInBuildSettings == SceneManager.GetActiveScene().buildIndex + 1 || saveGame)

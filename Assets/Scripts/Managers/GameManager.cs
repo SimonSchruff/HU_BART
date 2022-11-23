@@ -5,7 +5,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System.Linq;
+using System.Net;
 using Managers;
+using System.IO;
 
 namespace Managers
 {
@@ -81,9 +84,11 @@ namespace Managers
             InGameHUD.InflateButton.onClick.AddListener(InflateBalloon);
         
         }
-
+        
             IEnumerator sendCoins (){
                 UnityWebRequest www = UnityWebRequest.Get("https://83.229.84.127:5500/setgeld?amount="+110);
+                www.certificateHandler = new CertificateWhore();
+                
                 // UnityWebRequest www = UnityWebRequest.Get("https://83.229.84.127:5500/setgeld?amount="+totalEarned);
                 yield return www.SendWebRequest();
                 Debug.Log("DID SOMETHING");
@@ -92,8 +97,6 @@ namespace Managers
 
         private void Start()
         {
-           // StartCoroutine(sendCoins());
-
             _initialBalloonScaleValue = InGameHUD.BalloonSprite.localScale.x;
             _balloonAmount = Balloons.Count;
         
