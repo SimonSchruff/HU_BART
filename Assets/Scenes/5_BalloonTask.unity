@@ -2341,33 +2341,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robotRateSoundWinGr1:
-  - {fileID: 8300000, guid: 48040a29c318b42f89f40f4be11b0f49, type: 3}
-  - {fileID: 8300000, guid: 346b84d5d5c064d4d9c1479d28e83061, type: 3}
-  - {fileID: 8300000, guid: b1df9ea43683d4a3bb238ab2ea3411a1, type: 3}
+  - {fileID: 8300000, guid: eca264dcc29824f56a6164869168904d, type: 3}
+  - {fileID: 8300000, guid: f6c815d6801614fa3b0fc8fe0b099d35, type: 3}
   robotRateSoundWinGr2:
-  - {fileID: 8300000, guid: f555c0b38dbbc4faaaa469f74926598e, type: 3}
-  - {fileID: 8300000, guid: ebfe17aa112384da2a4f377a3a88afe4, type: 3}
-  - {fileID: 8300000, guid: e1fe62a7a57ef4325a74275e2c4b0816, type: 3}
+  - {fileID: 8300000, guid: cd5ae54642b5640fd9c0c9257fb61baf, type: 3}
+  - {fileID: 8300000, guid: 7e5c41b9eb5e244d6b187f917a87ed57, type: 3}
   robotRateSoundWinGr3:
-  - {fileID: 8300000, guid: 14399990435b64476b359e46c1225ba6, type: 3}
-  - {fileID: 8300000, guid: 20269be4c064146bf8dbfcea770fe1a4, type: 3}
-  - {fileID: 8300000, guid: a95eef5a0ddc84ce0805c6cd4f6b3abc, type: 3}
+  - {fileID: 8300000, guid: c0f89a93027464dce8108e398e83f000, type: 3}
+  - {fileID: 8300000, guid: 4f38cde6ecdfc415093c85047de2e75e, type: 3}
   robotRateSoundLossGr1:
-  - {fileID: 8300000, guid: ee3a61ef200c8464abd7b462f6270c19, type: 3}
-  - {fileID: 8300000, guid: 88fd14cc73fc84f4bb650a212f03c487, type: 3}
-  - {fileID: 8300000, guid: dfe7d4d9dadd344eeb7f113270a6e549, type: 3}
+  - {fileID: 8300000, guid: 9cfaededec32040ad8fc7e097547ead2, type: 3}
+  - {fileID: 8300000, guid: baf04df9d3e924561b6f1a4f25b376cb, type: 3}
   robotRateSoundLossGr2:
-  - {fileID: 8300000, guid: a9aa8cbaa3a5a4a69bb9f3182cf5cf67, type: 3}
-  - {fileID: 8300000, guid: 108cfd97db1ce4e05b91519d518e9c37, type: 3}
-  - {fileID: 8300000, guid: 4f6cd07c218904b8a896af0af01eaaf4, type: 3}
+  - {fileID: 8300000, guid: bc938eb0d034a4dc3859706ae8eae140, type: 3}
+  - {fileID: 8300000, guid: 73ed8e70d20704bb0b428c7a66b93a1f, type: 3}
   robotRateSoundLossGr3:
-  - {fileID: 8300000, guid: 1993ad026a1904e679401c1ace8b72ae, type: 3}
-  - {fileID: 8300000, guid: 8146b383aea5e4039ad4c4a6222893d1, type: 3}
-  - {fileID: 8300000, guid: 301bbd62b09bc4d0ab8c85e44d2cd0a7, type: 3}
+  - {fileID: 8300000, guid: 51242da4b80bc4fcb9bfe1722d97e7ed, type: 3}
+  - {fileID: 8300000, guid: 5ec5c0f8ba72246eebc55a1d4386414c, type: 3}
   RobotSounds:
-  - {fileID: 8300000, guid: 4ba5a72b74ae34671a841e9c07be532f, type: 3}
-  - {fileID: 8300000, guid: 4ba5a72b74ae34671a841e9c07be532f, type: 3}
-  - {fileID: 8300000, guid: 76aab73d614a14e94994e0a3ea9621c8, type: 3}
+  - {fileID: 8300000, guid: 099dbb63f199b4f349a7023221857667, type: 3}
+  - {fileID: 8300000, guid: 27d7a206f124f46489e170bd45bd8db7, type: 3}
+  - {fileID: 8300000, guid: 5a61adbb679f94524a6f9caa111a2920, type: 3}
   InflateSound: {fileID: 8300000, guid: 0a2d74cef28994ef3a8c96b29277adaf, type: 3}
   PopSound: {fileID: 8300000, guid: 7ae444633dd3e4f20bc53c7f1dc4e026, type: 3}
 --- !u!82 &413331145
