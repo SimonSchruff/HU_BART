@@ -166,7 +166,7 @@ MonoBehaviour:
     audioFileGr_3: {fileID: 0}
   - isRobotTalking: 1
     questionText: "Stell dir einen warmen Sommertag vor. Was w\xFCrdest du an einem
-      solchen Tag gerne machen? "
+      solchen Tag machen? "
     audioFileGr_1: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
     audioFileGr_2: {fileID: 8300000, guid: 4e4af5b7eddab4b8eb65e3538ddca050, type: 3}
     audioFileGr_3: {fileID: 8300000, guid: b3d580c8d08a94885bcbbe2f906e6fea, type: 3}

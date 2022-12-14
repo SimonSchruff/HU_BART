@@ -2307,6 +2307,8 @@ GameObject:
   - component: {fileID: 413331143}
   - component: {fileID: 413331144}
   - component: {fileID: 413331145}
+  - component: {fileID: 413331146}
+  - component: {fileID: 413331147}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2460,6 +2462,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &413331146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413331142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f183ee64e64476995a36bdbbb58a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedSaveLocation: 1
+  actualGroup: 0
+  PlayerID: test_id
+  GroupID: 1
+  URL: https://marki.fun/PHP/dataFL.php
+--- !u!114 &413331147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413331142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df36d90a533f5ac4c9da407b45ff11ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalEarned: 0
 --- !u!1 &422498757
 GameObject:
   m_ObjectHideFlags: 0

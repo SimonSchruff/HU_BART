@@ -96,20 +96,28 @@ namespace Managers
             switch (SaveManager.instance.actualGroup)
             {
                 case SaveManager.GroupInfo.Group1:
-                    _source.clip = win ? getRandomElem(robotRateSoundWinGr1) : getRandomElem(robotRateSoundLossGr1);
+                    _source.clip = win ? getRandomElem(robotRateSoundWinGr1, true) : getRandomElem(robotRateSoundLossGr1, false);
                     break;
                 case SaveManager.GroupInfo.Group2:
-                    _source.clip = win ? getRandomElem(robotRateSoundWinGr2) : getRandomElem(robotRateSoundLossGr2);
+                    _source.clip = win ? getRandomElem(robotRateSoundWinGr2, true) : getRandomElem(robotRateSoundLossGr2, false);
                     break;
                 case SaveManager.GroupInfo.Group3:
-                    _source.clip = win ? getRandomElem(robotRateSoundWinGr3) : getRandomElem(robotRateSoundLossGr3);
+                    _source.clip = win ? getRandomElem(robotRateSoundWinGr3, true) : getRandomElem(robotRateSoundLossGr3, false);
                     break;
             }
             _source.Play();
         }
-        AudioClip getRandomElem (AudioClip [] inputArray)
+        int _tempLost = 0;
+        int _tempWon = 0;
+        
+        AudioClip getRandomElem (AudioClip [] inputArray, bool _lost)
         {
-            return inputArray[(Random.Range(0, inputArray.Length - 1))];
+            if (_lost)
+                _tempLost++;
+            else
+                _tempWon++;
+
+            return inputArray[((_lost?_tempLost:_tempWon) % inputArray.Length)];
         }
     }
 }
