@@ -11202,11 +11202,11 @@ MonoBehaviour:
   - MaxPumps: 5
     Type: 0
   - MaxPumps: 30
-    Type: 2
-  - MaxPumps: 15
-    Type: 0
-  - MaxPumps: 30
     Type: 1
+  - MaxPumps: 15
+    Type: 2
+  - MaxPumps: 30
+    Type: 0
   - MaxPumps: 30
     Type: 1
   - MaxPumps: 10
