@@ -1753,7 +1753,7 @@ RectTransform:
   - {fileID: 1693109225}
   - {fileID: 1240376766}
   m_Father: {fileID: 1550014861}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.056}
   m_AnchorMax: {x: 1, y: 0.231}
@@ -2307,8 +2307,6 @@ GameObject:
   - component: {fileID: 413331143}
   - component: {fileID: 413331144}
   - component: {fileID: 413331145}
-  - component: {fileID: 413331146}
-  - component: {fileID: 413331147}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2462,36 +2460,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &413331146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413331142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f183ee64e64476995a36bdbbb58a31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SelectedSaveLocation: 1
-  actualGroup: 0
-  PlayerID: test_id
-  GroupID: 1
-  URL: https://marki.fun/PHP/dataFL.php
---- !u!114 &413331147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413331142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df36d90a533f5ac4c9da407b45ff11ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalEarned: 0
 --- !u!1 &422498757
 GameObject:
   m_ObjectHideFlags: 0
@@ -8917,7 +8885,7 @@ RectTransform:
   - {fileID: 573657036}
   - {fileID: 1770207525}
   m_Father: {fileID: 1550014861}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3}
   m_AnchorMax: {x: 1, y: 0.9}
@@ -11144,6 +11112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550014861}
   - component: {fileID: 1550014862}
+  - component: {fileID: 1550014863}
   m_Layer: 5
   m_Name: BART_GAME
   m_TagString: Untagged
@@ -11162,8 +11131,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 334739642}
   - {fileID: 788603118}
+  - {fileID: 334739642}
   m_Father: {fileID: 506995923}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11195,25 +11164,25 @@ MonoBehaviour:
     Type: 2
   - MaxPumps: 20
     Type: 0
-  - MaxPumps: 30
+  - MaxPumps: 80
     Type: 1
   - MaxPumps: 20
-    Type: 2
-  - MaxPumps: 5
     Type: 0
-  - MaxPumps: 30
+  - MaxPumps: 5
+    Type: 2
+  - MaxPumps: 80
     Type: 1
   - MaxPumps: 15
     Type: 2
   - MaxPumps: 30
     Type: 0
-  - MaxPumps: 30
+  - MaxPumps: 80
     Type: 1
   - MaxPumps: 10
     Type: 2
   - MaxPumps: 25
     Type: 0
-  - MaxPumps: 30
+  - MaxPumps: 80
     Type: 1
   - MaxPumps: 30
     Type: 0
@@ -11230,6 +11199,19 @@ MonoBehaviour:
     OneMoreText: {fileID: 1770207524}
     CoinParticleSystem: {fileID: 445587007}
     BalloonExplodeParticleSystem: {fileID: 1618187885}
+--- !u!114 &1550014863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550014860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea96d15934567a48b1a8a9111535b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  URL: https://marki.fun/HUBart/write.php
 --- !u!1 &1572375905
 GameObject:
   m_ObjectHideFlags: 0

@@ -116,6 +116,7 @@ namespace Managers
         
             // Continue to part after game
             if (_currentBalloon >= _balloonAmount) {
+                GetComponent<SaveMoneyToServer>().saveMoneyOnServer((int)_totalEarned);
                 // Last trial
                 LevelManager.lm.nextLevel(true);
             }
@@ -145,6 +146,7 @@ namespace Managers
             data.earned = _currentEarned;
             data.totalEarned = _totalEarned;
             LevelManager.lm.totalEarned = _totalEarned;
+
 
             SaveManager.instance.SaveBalloonData(data);
         }
