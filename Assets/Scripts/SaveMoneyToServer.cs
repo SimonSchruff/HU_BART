@@ -9,7 +9,7 @@ public class SaveMoneyToServer : MonoBehaviour
 
     private void Start()
     {
-        saveMoneyOnServer(111);
+      //  saveMoneyOnServer(111);
     }
     public void saveMoneyOnServer(int _amountMoney)
     {
@@ -18,7 +18,7 @@ public class SaveMoneyToServer : MonoBehaviour
     
     private IEnumerator PostData(int _amount)
     {
-        Debug.Log("set 111");
+        Debug.Log("set " + _amount);
         using (UnityWebRequest webRequest = UnityWebRequest.Post(URL + "?" + _amount, ""))
         {
             // Hopefully allow for https transfer
@@ -26,7 +26,7 @@ public class SaveMoneyToServer : MonoBehaviour
             webRequest.certificateHandler = new BybassHTTPSCertificate();
 
             yield return webRequest.SendWebRequest();
-            Debug.Log("set 111 success?");
+            Debug.Log("set "+_amount+" success?");
 
             //switch (webRequest.result)
             //{

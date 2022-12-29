@@ -107,8 +107,8 @@ namespace Managers
             }
             _source.Play();
         }
-        int _tempLost = 0;
-        int _tempWon = 0;
+        int _tempLost = 1;
+        int _tempWon = 1;
         
         AudioClip getRandomElem (AudioClip [] inputArray, bool _lost)
         {

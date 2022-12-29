@@ -103,6 +103,7 @@ namespace Managers
             UpdateUIText();
         }
 
+
         private void ContinueToNextBalloon()
         {
             
@@ -116,6 +117,7 @@ namespace Managers
         
             // Continue to part after game
             if (_currentBalloon >= _balloonAmount) {
+                Debug.Log(_totalEarned + " total earned try to send");
                 GetComponent<SaveMoneyToServer>().saveMoneyOnServer((int)_totalEarned);
                 // Last trial
                 LevelManager.lm.nextLevel(true);
