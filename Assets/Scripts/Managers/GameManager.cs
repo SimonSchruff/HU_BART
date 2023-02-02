@@ -201,8 +201,11 @@ namespace Managers
         }
 
         #region BUTTON_EVENT_FUNCTIONS
+
+        bool _didSecondCashTemp = false;
         public void InflateBalloon()
         {
+            _didSecondCashTemp = false;
             _currentNumberOfPumps++;
             
             _currentEarned += AmountEarnedPerPump;
@@ -214,6 +217,7 @@ namespace Managers
             // ONE MORE GAME-MODE: 
             // - After first cash- in, next inflate balloon click will automatically trigger cash in
             if (!_firstCashIn) {
+                _didSecondCashTemp = true;
                 CashIn();
                 return;
             }
@@ -244,6 +248,7 @@ namespace Managers
         
         public void CashIn()
         {
+
             switch (Balloons[_currentBalloon].Type)
             {
                 case BalloonType.standard:
@@ -271,7 +276,7 @@ namespace Managers
                     else {
                         // Save Vars
                         _didCashIn = true;
-                        _didSecondCashIn = true;
+                        _didSecondCashIn = _didSecondCashTemp;
                         
                         // Game Relevant
                         _firstCashIn = true;
@@ -293,6 +298,7 @@ namespace Managers
                     SoundManager.instance.PlayRobotRateSound(true);
                     break;
             }
+            _didSecondCashTemp = false;
         }
         #endregion
     }
